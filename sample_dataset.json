@@ -1,7 +1,5 @@
 {
-  "status": "success",
-  "totalResults": 71,
-  "results": [
+  "data": [
     {
       "title": "Tesla Shanghai Capacity Will Exceed 1 Million Cars In 2022, BYD Blade Batteries Coming",
       "link": "https://cleantechnica.com/2022/02/14/tesla-shanghai-capacity-will-exceed-1-million-cars-in-2022-byd-blade-batteries-coming/",
@@ -1791,6 +1789,4 @@
       ],
       "language": "english"
     }
-  ],
-  "nextPage": 1
-}
+  ]}
