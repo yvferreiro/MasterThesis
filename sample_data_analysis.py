@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 13 11:18:43 2023
+import json
 
-@author: danie
-"""
+with open('sample_dataset.json') as user_file:
+  file_contents = user_file.read()
+  
+print(file_contents)
 
-#firstcode
+#parsed_json = json.loads(file_contents)
