@@ -1,7 +1,14 @@
+import newsdataapi
+from newsdataapi import NewsDataApiClient
 import pandas as pd
 import nltk as nltk
 from nltk.tokenize import RegexpTokenizer
 
+
+api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
+
+response = api.news_api( q= "ronaldo" , country = "us")
+print(response)
 # when downloading a json file from newsio they include a summary of the query. So
 #it will say how many results etc. This needs to be replaced with just "data:"
 # to allow the df to parse properly. There is even a part that must be removed at the end
