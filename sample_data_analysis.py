@@ -7,16 +7,33 @@ from nltk.tokenize import RegexpTokenizer
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 
-response = api.news_api( q= "ronaldo" , country = "us")
+response = api.news_api(country = "us")
+
+del response['status']
+del response['totalResults']
+del response['nextPage']
+
 print(response)
+
 # when downloading a json file from newsio they include a summary of the query. So
 #it will say how many results etc. This needs to be replaced with just "data:"
 # to allow the df to parse properly. There is even a part that must be removed at the end
 
 # this counts how many news sources are present in the file. 
+import ast
+parsed_json = ast.literal_eval(response['results'])
+df = pd.json_normalize(parsed_json, record_path=[list(parsed_json)[0], 'data'])
 
-df = pd.read_json ('sample_dataset.json', orient='split')
+
+
+df = pd.read_json (response)
 n = len(pd.unique(df['source_id']))
+
+
+
+
+print(try)
+
 
 #I used this website to help with this section https://www.kirenz.com/post/2021-12-11-text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/
 
