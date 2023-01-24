@@ -6,8 +6,9 @@ from nltk.tokenize import RegexpTokenizer
 
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
-
+# FML IT COMES OUT WITH ' not " FUCK
 response = api.news_api(country = "us")
+print(response)
 
 del response['status']
 del response['totalResults']
@@ -21,7 +22,7 @@ print(response)
 
 # this counts how many news sources are present in the file. 
 import ast
-parsed_json = ast.literal_eval(response['results'])
+parsed_json = ast.literal_eval(response)
 df = pd.json_normalize(parsed_json, record_path=[list(parsed_json)[0], 'data'])
 
 
