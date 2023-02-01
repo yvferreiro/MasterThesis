@@ -9,6 +9,9 @@ api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 # FML IT COMES OUT WITH ' not " FUCK
 response = api.news_api(country = "us")
 print(response)
+response2 = str(response)
+
+
 
 del response['status']
 del response['totalResults']
@@ -22,18 +25,18 @@ print(response)
 
 # this counts how many news sources are present in the file. 
 import ast
-parsed_json = ast.literal_eval(response)
-df = pd.json_normalize(parsed_json, record_path=[list(parsed_json)[0], 'data'])
+parsed_json = ast.literal_eval(response2)
+df = pd.json_normalize(parsed_json, record_path=[list(parsed_json)[0], 1])
 
-
-
-df = pd.read_json (response)
+df = pd.read_json (response2)
+pd.json_normalize(response2)
+print(response2)
 n = len(pd.unique(df['source_id']))
 
+#I cannot get this api key bullshit to actually work. Maybe the bit lab is the answer?
 
 
 
-print(try)
 
 
 #I used this website to help with this section https://www.kirenz.com/post/2021-12-11-text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/
