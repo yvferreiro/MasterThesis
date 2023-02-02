@@ -3,40 +3,31 @@ from newsdataapi import NewsDataApiClient
 import pandas as pd
 import nltk as nltk
 from nltk.tokenize import RegexpTokenizer
+import json
+import ast
 
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
-# FML IT COMES OUT WITH ' not " FUCK
-response = api.news_api(country = "us")
+
+#this page method is what current documentation asks for in the repo but something is wrong 
+#they have a bug that makes it want a string and an int at the same time. 
+
+#emailed Naveen and he's on it!
+
+page=None
+while True:
+    response = api.news_api(page = page, q= "covid", language= "en")
+    print(response)
+    page = response.get('nextPage',None)
+    print(page)
+    if not page:
+        break
+#response = api.news_api( q= "fish" , country = "us",page=2)
 print(response)
-response2 = str(response)
-
-
-
-del response['status']
-del response['totalResults']
-del response['nextPage']
-
-print(response)
-
-# when downloading a json file from newsio they include a summary of the query. So
-#it will say how many results etc. This needs to be replaced with just "data:"
-# to allow the df to parse properly. There is even a part that must be removed at the end
-
+results = response['results']
+df = pd.json_normalize(results)
+print(df)
 # this counts how many news sources are present in the file. 
-import ast
-parsed_json = ast.literal_eval(response2)
-df = pd.json_normalize(parsed_json, record_path=[list(parsed_json)[0], 1])
-
-df = pd.read_json (response2)
-pd.json_normalize(response2)
-print(response2)
-n = len(pd.unique(df['source_id']))
-
-#I cannot get this api key bullshit to actually work. Maybe the bit lab is the answer?
-
-
-
 
 
 #I used this website to help with this section https://www.kirenz.com/post/2021-12-11-text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/
