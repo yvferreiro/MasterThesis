@@ -1,11 +1,11 @@
-import newsdataapi
+#import newsdataapi
 from newsdataapi import NewsDataApiClient
 import pandas as pd
-import nltk as nltk
+#import nltk as nltk
 from nltk.tokenize import RegexpTokenizer
-import json
-import ast
-
+#import json
+#import ast
+import re
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 
@@ -13,25 +13,44 @@ api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 #they have a bug that makes it want a string and an int at the same time. 
 
 #emailed Naveen and he's on it!
+response = api.news_api(q= "covid", language= "en")
 
-page=None
-while True:
-    response = api.news_api(page = page, q= "covid", language= "en")
-    print(response)
-    page = response.get('nextPage',None)
-    print(page)
-    if not page:
-        break
 #response = api.news_api( q= "fish" , country = "us",page=2)
-print(response)
+#Generates the article database
 results = response['results']
-df = pd.json_normalize(results)
-print(df)
-# this counts how many news sources are present in the file. 
+article_df = pd.json_normalize(results)
+article_df = article_df.assign(Article_Number=range(len(article_df)))
 
+#creates a copy of the articles and seperates by sentence 
+df_copy = article_df
+sentence_df = df_copy.drop(['title', 'link','keywords', 'creator','video_url', 
+                            'description', 'pubDate', 'image_url', 'source_id', 
+                            'category', 'country', 'language'], axis=1) 
+
+regex_sentence_splitter = r"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s"
+sentence_df['content'] = article_df['content'].apply(lambda x: re.split(regex_sentence_splitter, x))
+sentence_df = sentence_df.explode('content', ignore_index=True)
+sentence_df.rename(columns={"Unnamed: 0": "Article_Number"}, inplace=True)
+sentence_df.index.name = "Sentence ID"
+print(sentence_df)
+
+#takes the sentence df and makes a word df out of it
+df_copy2 = sentence_df
+word_df = df_copy2.drop(['Article_Number'], axis=1) 
+
+regex_word_splitter = r"\s+"
+word_df['content'] = sentence_df['content'].apply(lambda x: re.split(regex_word_splitter, x))
+word_df = word_df.explode('content', ignore_index=True)
+word_df.rename(columns={"Unnamed: 0": "Sentence_Number"}, inplace=True)
+word_df.index.name = "Word ID"
+#missing the sentence ID. I think I messed something up but i"m going to charge ahead
+
+
+
+
+#This should all be a function. I will change it ASAP
 
 #I used this website to help with this section https://www.kirenz.com/post/2021-12-11-text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/
-
 #this makes the article text all lower case
 df['full_description'] = df['full_description'].astype(str).str.lower()
 #print(df[['full_description']].to_string(index=False))
