@@ -15,6 +15,13 @@ api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 #emailed Naveen and he's on it!
 response = api.news_api(q= "covid", language= "en")
 
+#So I'm thinking that we make a few funtions
+    #function to call the API (maybe in it's own folder on git)
+    #function to take the new things added to the list of articles to the article df
+    #function to take all new articles and generate the sentences and words. 
+    
+    #then we need a whole new file in a folder for each function so we can run them seperatly
+
 #response = api.news_api( q= "fish" , country = "us",page=2)
 #Generates the article database
 results = response['results']
@@ -44,8 +51,6 @@ word_df = word_df.explode('content', ignore_index=True)
 word_df.rename(columns={"Unnamed: 0": "Sentence_Number"}, inplace=True)
 word_df.index.name = "Word ID"
 #missing the sentence ID. I think I messed something up but i"m going to charge ahead
-
-
 
 
 #This should all be a function. I will change it ASAP
