@@ -47,6 +47,7 @@ word_df = df_copy2.drop(['Article_Number'], axis=1)
 
 regex_word_splitter = r"\s+"
 word_df['content'] = sentence_df['content'].apply(lambda x: re.split(regex_word_splitter, x))
+#Would it be smart to add a counter to the articel database here?
 word_df = word_df.explode('content', ignore_index=True)
 word_df.rename(columns={"Unnamed: 0": "Sentence_Number"}, inplace=True)
 word_df.index.name = "Word ID"

@@ -40,3 +40,10 @@ df_names
 # apply the genderize function to all of the rows in the df_names dataset with regards to the "first name" column
 df_names["gender"]= df_names.apply(lambda row : genderize(row["first name"]),axis=1)
 print(df_names)
+
+
+#vectors
+
+# Here is how the people=men people did it. THey just dled this https://fasttext.cc/docs/en/english-vectors.html
+#Crazy shit right. I think I'll dl and upload to the github and see if i can access it 
+#though the file. Trying to be clever. 
