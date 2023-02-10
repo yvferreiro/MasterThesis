@@ -1,6 +1,6 @@
 from newsdataapi import NewsDataApiClient
 import pandas as pd
-import re
+#import re
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 response = api.news_api(q= "election", language= "en", country = "us")
@@ -22,7 +22,35 @@ article_df['creator gender']= article_df.apply(lambda row : genderize(row["autho
 print(article_df['creator gender'])
 print(article_df['creator'])
 
+#maybe for this function we need to do something to make the naming unique 
+def name_function(df_name, names):
+    #df_name.insert(0,"contains_names", " ")
+    list_a = []
+    for x in names:
+        if x is None:
+            list_a.append(0)
+        else: 
+            nltk_results = ne_chunk(pos_tag(word_tokenize(x)))
+            list_b = []
+            for nltk_result in nltk_results:
+                if type(nltk_result) == Tree:
+                    name = ''
+                    for nltk_result_leaf in nltk_result.leaves():
+                        #if nltk_result.label() == "Person": 
+                        name += nltk_result_leaf[0]
+                        #else: 
+                            #break
+                        list_b.append([nltk_result.label(), name])
+                        #print(list_b)
+            list_a.append(list_b)
+    return list_a
+list_A = name_function(article_df, article_df["creator"])
+article_df["name_classification"] = list_A
+article_df[["name_classification", "creator"]]
 
+
+        
+    
 
 
 
@@ -40,17 +68,15 @@ from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
 
 sample = "John was a nice guy and had a friend named Earl"
-text = '''
-This is a 
-'''
+text = article_df["creator"][0]
 
 nltk_results = ne_chunk(pos_tag(word_tokenize(text)))
 for nltk_result in nltk_results:
     if type(nltk_result) == Tree:
         name = ''
         for nltk_result_leaf in nltk_result.leaves():
-            name += nltk_result_leaf[0] + ' '
-        print ('Type: ', nltk_result.label(), 'Name: ', name)
+            name += nltk_result_leaf[0] + ' ' 
+        print (name)
         
 #above code comes from an online article. I'm thinking that I could use a pandas 
 #df to figure out how to detect a name and mark the sentence Y or N or whatever. 
