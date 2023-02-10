@@ -24,7 +24,6 @@ print(article_df['creator'])
 
 #maybe for this function we need to do something to make the naming unique 
 def name_function(df_name, names):
-    #df_name.insert(0,"contains_names", " ")
     list_a = []
     for x in names:
         if x is None:
@@ -35,15 +34,12 @@ def name_function(df_name, names):
             for nltk_result in nltk_results:
                 if type(nltk_result) == Tree:
                     name = ''
-                    for nltk_result_leaf in nltk_result.leaves():
-                        #if nltk_result.label() == "Person": 
+                    for nltk_result_leaf in nltk_result.leaves(): 
                         name += nltk_result_leaf[0]
-                        #else: 
-                            #break
                         list_b.append([nltk_result.label(), name])
-                        #print(list_b)
             list_a.append(list_b)
     return list_a
+    #could add the list as a column inside the function
 list_A = name_function(article_df, article_df["creator"])
 article_df["name_classification"] = list_A
 article_df[["name_classification", "creator"]]
