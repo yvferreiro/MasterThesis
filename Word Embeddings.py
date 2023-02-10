@@ -1,19 +1,20 @@
-import io
+from gensim.models import fasttext
+from gensim.test.utils import datapath
 
-#good god. I gave this almost 25 minutes to load and nothing has happened. I'll
-#read some documentation and come back. 
+file = "C:/Users/danie/Desktop/crawl-300d-2M-subword.bin"
+#file = "C:/Users/danie/Desktop/crawl-300d-2M-subword.bin"
 
-def load_vectors(fname):
-    fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
-    n, d = map(int, fin.readline().split())
-    data = {}
-    for line in fin:
-        tokens = line.rstrip().split(' ')
-        data[tokens[0]] = map(float, tokens[1:])
-    return data
+model = fasttext.load_facebook_vectors(datapath(file))
+print(model)
 
-file = "C:/Users/danie/Desktop/crawl-300d-2M-subword.vec"
+word = "cat"
+model.most_similar(word)
+model.similarity("dog", "cat")
+'landlord' in model.key_to_index 
 
-data = load_vectors(file)
+Male_word_list =["boy", "boy’s", "boyhood", "boyish", "boys", "fella", "gent", "gentleman", "gentleman’s", "gentlemen", "gents", "guy", "guys", "he", "hes", "him", "himself", "his", "lad", "laddie", "male", "male’s", "males", "man", "man’s", "manhood", "manly", "masculine", "masculinity", "men", "mens", "mister", "mr", "schoolboy", "schoolboys", "sir"]
+Female_word_list = ["female", "female’s", "females", "feminine", "femininity", "femme", "gal", "gals", "girl", "girl’s", "girlhood", "girlish", "girls", "girly", "her", "hers", "herself", "ladies", "lady", "lady’s", "lass", "lassie", "ma’am", "maam", "madam", "maiden", "missus", "ms", "schoolgirl", "schoolgirls", "she", "shes", "woman", "woman’s", "womanhood", "womanly", "women", "womens"]
 
-print("hi")
+model.n_similarity(Male_word_list, Female_word_list)
+#https://github.com/RaRe-Technologies/gensim/wiki/Migrating-from-Gensim-3.x-to-4#15-removed-third-party-wrappers
+#link to the gensim model funcitons
