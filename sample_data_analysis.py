@@ -13,7 +13,8 @@ api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
 #they have a bug that makes it want a string and an int at the same time. 
 
 #emailed Naveen and he's on it!
-response = api.news_api(q= "covid", language= "en")
+response = api.news_api(q= "election", language= "en")
+#! Bug 4
 
 #So I'm thinking that we make a few funtions
     #function to call the API (maybe in it's own folder on git)
@@ -40,6 +41,7 @@ sentence_df = sentence_df.explode('content', ignore_index=True)
 sentence_df.rename(columns={"Unnamed: 0": "Article_Number"}, inplace=True)
 sentence_df.index.name = "Sentence ID"
 print(sentence_df)
+print(article_df)
 
 #takes the sentence df and makes a word df out of it
 df_copy2 = sentence_df
@@ -47,14 +49,23 @@ word_df = df_copy2.drop(['Article_Number'], axis=1)
 
 regex_word_splitter = r"\s+"
 word_df['content'] = sentence_df['content'].apply(lambda x: re.split(regex_word_splitter, x))
-#Would it be smart to add a counter to the articel database here?
-word_df = word_df.explode('content', ignore_index=True)
-word_df.rename(columns={"Unnamed: 0": "Sentence_Number"}, inplace=True)
-word_df.index.name = "Word ID"
-#missing the sentence ID. I think I messed something up but i"m going to charge ahead
+word_df = word_df.explode('content', ignore_index=False)
+#! Bug Refrence number 1
+print(word_df)
 
+#! Bug 5 
 
 #This should all be a function. I will change it ASAP
+
+
+
+
+
+
+
+
+
+
 
 #I used this website to help with this section https://www.kirenz.com/post/2021-12-11-text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/text-mining-and-sentiment-analysis-with-nltk-and-pandas-in-python/
 #this makes the article text all lower case
@@ -71,6 +82,8 @@ df['text_token']=df['full_description'].apply(regexp.tokenize)
 #stopwords = nltk.corpus.stopwords.words("english")
 #df['text_token'] = df['text_token'].apply(lambda x: [item for item in x if item not in stopwords])
 
+
+#! Bug 3 SHould add a way for this to work with current data structure
 df["Word Count"] = df["text_token"].str.len()
 
 his_w = ["his", "he", "man", "uncle", "dad", "father", "boy", "husband"]

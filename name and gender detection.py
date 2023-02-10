@@ -1,14 +1,50 @@
+from newsdataapi import NewsDataApiClient
+import pandas as pd
+import re
+
+api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
+response = api.news_api(q= "election", language= "en", country = "us")
+results = response['results']
+article_df = pd.json_normalize(results)
+article_df = article_df.assign(Article_Number=range(len(article_df)))
+
+
+#this is how we had to write gender detection
+article_df["creator"] = article_df["creator"].astype('string')
+article_df['creator'] = article_df['creator'].apply(lambda x: x.replace('[','').replace(']','').replace("'",'')) 
+article_df['pos'] = article_df['creator'].str.find(' ')
+article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']],axis=1)
+article_df['author_first_name']
+
+def genderize(name): 
+    return Genderize().get([name])[0]["gender"]
+article_df['creator gender']= article_df.apply(lambda row : genderize(row["author_first_name"]),axis=1)
+print(article_df['creator gender'])
+print(article_df['creator'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Just run on author name. If a name add a new 1/0 column
 import nltk
 from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
 
 sample = "John was a nice guy and had a friend named Earl"
 text = '''
-This is a sample text that contains the name Alex Smith who is one of the developers of this project.
-You can also find the surname Jones here.
+This is a 
 '''
 
-nltk_results = ne_chunk(pos_tag(word_tokenize(sample)))
+nltk_results = ne_chunk(pos_tag(word_tokenize(text)))
 for nltk_result in nltk_results:
     if type(nltk_result) == Tree:
         name = ''
@@ -30,9 +66,10 @@ def genderize(name):
     return Genderize().get([name])[0]["gender"]
 
 #dummy df with sample names 
-names = ["Shirley Temple", "Clark Gables", "Georgle Jungle", "George Clooney", "Danielle Duncan", "Yolanda Ferreiro"]
+names = ["Shirley Temple", "Clark Gables","ashley Smith", "Alex G", "Priantha G", "John G", "john G", "jon G", "Blake Shelton", "Blake Lively", "Georgle Jungle", "George Clooney", "Danielle Duncan", "Yolanda Ferreiro"]
 df_names = pd.DataFrame(names, columns = ["names"])
-
+df_names['names']
+#! Bug 2
 #extract first name from a df of first and last names & create column only with first names
 df_names.loc[df_names["names"].str.split().str.len() == 2, "first name"] = df_names["names"].str.split().str[0]
 df_names
