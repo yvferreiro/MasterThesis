@@ -18,3 +18,29 @@ Female_word_list = ["female", "female’s", "females", "feminine", "femininity",
 model.n_similarity(Male_word_list, Female_word_list)
 #https://github.com/RaRe-Technologies/gensim/wiki/Migrating-from-Gensim-3.x-to-4#15-removed-third-party-wrappers
 #link to the gensim model funcitons
+
+from nltk.tokenize import RegexpTokenizer
+import pandas as pd
+from newsdataapi import NewsDataApiClient
+api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
+response = api.news_api(q= "fashion", language= "en")
+results = response['results']
+print(results)
+article_df = pd.json_normalize(results)
+article_df = article_df.assign(Article_Number=range(len(article_df)))
+article_df.info()
+
+
+article_df['content'] = article_df['content'].astype(str).str.lower()
+#print(df[['full_description']].to_string(index=False))
+
+#tokenization
+regexp = RegexpTokenizer('\w+')
+article_df['text_token']=article_df['content'].apply(regexp.tokenize)
+article_df['text_token'][[0]]
+
+model.n_similarity(Male_word_list, article_df['text_token'].iloc[1])
+model.n_similarity(Female_word_list, article_df['text_token'].iloc[1])
+
+model.n_similarity(Male_word_list, article_df['text_token'].iloc[0])
+model.n_similarity(Female_word_list, article_df['text_token'].iloc[0])
