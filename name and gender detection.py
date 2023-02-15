@@ -79,6 +79,18 @@ article_df['creator gender']= article_df.apply(lambda row : genderize(row["autho
 print(article_df['creator gender'])
 print(article_df['creator'])
 
+
+##WTF it picks up "None" as a "male". Maybe we pick another word to replace the NaNs. To be discussed
+
+
+
+
+
+
+
+
+
+##OLD WORK & ORDER HERE JUST IN CASE 
 #maybe for this function we need to do something to make the naming unique 
 def name_function(df_name, names):
     list_a = []
