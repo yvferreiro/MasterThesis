@@ -1,5 +1,6 @@
 from newsdataapi import NewsDataApiClient
 import pandas as pd
+import seaborn as sns
 #import re
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
@@ -8,13 +9,69 @@ results = response['results']
 article_df = pd.json_normalize(results)
 article_df = article_df.assign(Article_Number=range(len(article_df)))
 
+#made some tweaks here for smoother working 
+article_df["creator"] = article_df["creator"].astype('string').replace("'", '', regex=True) #remove speech marks
+article_df["creator"] = article_df["creator"].str.strip('[]') #remove square brackets
+article_df["creator"] = article_df["creator"].fillna("none ") #added this so that NaNs won't be an issue in future ops
+article_df['pos'] = article_df['creator'].str.find(' ')
+article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']], axis=1)
+
 
 #this is how we had to write gender detection
-article_df["creator"] = article_df["creator"].astype('string')
-article_df['creator'] = article_df['creator'].apply(lambda x: x.replace('[','').replace(']','').replace("'",'')) 
-article_df['pos'] = article_df['creator'].str.find(' ')
-article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']],axis=1)
-article_df['author_first_name']
+#article_df["creator"] = article_df["creator"].astype('string')
+#article_df['creator'] = article_df['creator'].apply(lambda x: x.replace('[','').replace(']','').replace("'",'')) 
+#article_df['pos'] = article_df['creator'].str.find(' ')
+#article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']],axis=1)
+#article_df['author_first_name']
+
+#maybe for this function we need to do something to make the naming unique 
+def name_function(df_name, names):
+    list_a = []
+    for x in names:
+        if x is None:
+            list_a.append(0)
+        else: 
+            nltk_results = ne_chunk(pos_tag(word_tokenize(x)))
+            list_b = []
+            for nltk_result in nltk_results:
+                if type(nltk_result) == Tree:
+                    name = ''
+                    for nltk_result_leaf in nltk_result.leaves(): 
+                        name += nltk_result_leaf[0]
+                        list_b.append([nltk_result.label(), name])
+            list_a.append(list_b)
+    return list_a
+
+named_individuals = name_function(article_df, article_df['creator'])
+
+#I discovered that if we plug in 1st names it picks them up as GPE, so I created another function picking up only the first names 
+def extract_gen(lst):
+    return [item[0] for item in lst]
+
+names2 = extract_gen(named_individuals) #confirms almost all individuals are picked up as person
+
+#iterator to capture the first name from the name_function outputs in a non-list format 
+
+def first_name_column_iterator (array, col_number ):
+    try:
+        for row in array:
+            yield row[col_number]
+    except IndexError:
+        print ("Error, columns")
+        raise
+
+for i,j in zip(column_iterator(names2,1),column_iterator(names2,0)):
+    print("First name is {}, they are a:".format(i))
+    print(j)
+
+##YF add the name classification column here 
+
+#gender now added correspondingly to first name in the DF
+print(article_df)
+
+#get count of male v. female creators 
+sns.set_theme(style="whitegrid")
+article_df['creator gender'].value_counts().plot(kind='bar', color = ["tomato", "skyblue"])
 
 def genderize(name): 
     return Genderize().get([name])[0]["gender"]
