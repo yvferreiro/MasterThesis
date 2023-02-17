@@ -44,12 +44,83 @@ def name_function(df_name, names):
 
 named_individuals = name_function(article_df, article_df['creator'])
 
-#I discovered that if we plug in 1st names it picks them up as GPE, so I created another function picking up only the first names 
-def extract_gen(lst):
-    return [item[0] for item in lst]
+#This function prints the categories of name of person (based on 1st name), 1st name of person identified 
+#for the outputs of "name_individuals", a variable created to capture the output of function "named_function". 
+#Important note: I plug in first and last names because if we only plug in first names, it identifies people as GPE when it is not the case. 
 
-names2 = extract_gen(named_individuals) #confirms almost all individuals are picked up as person
+names3_cat = []
+names3_name = []
 
+def extract_cat(lst):
+    for i in range(len(lst)): #list of list of list 
+        for j in range(len(lst[i])): #list of list (list of first name + labels and last name + labels)
+            if len(lst[j]) == 0: #if len = 0 then it means the name_function didn't think it was a name 
+                names3_cat.append("cannot categorize")
+                names3_name.append("none ")
+            else:  
+                #for g in range(len(lst[j])): #if len = 2 then there is a label and a name
+                if len(lst[j]) == 2: #if len = 2 then there is a label and a name
+                    names3_cat.append([item[0] for item in lst[j]])
+                    names3_name.append([item[1] for item in lst[j]])
+                    #return [item[0] for item in lst[i]]
+                if len(lst[j]) == 1: #if len = 1 then there is a label but no name associated to it 
+                    names3_cat.append("no label identified")
+                    names3_name.append("no person identified ")
+                        #return ("no author identified")
+    return names3_cat, names3_name
+
+
+names2 = extract_cat(named_individuals) #confirms almost all individuals are picked up as person
+
+#Create a new DF storing 1st names and gender (independent)
+names2_list_cat = list((names2)[0])
+names2_list_name = list((names2)[1])
+print(names2_list_cat)
+
+#function to grab category of 1st name 
+first_cat = []
+def cats1(categories): 
+    for i in range(len(categories)):
+        if len(categories[i]) == 2: 
+            first_cat.append(categories[i][0])
+        else: 
+            first_cat.append("not a person")
+    return first_cat #cat is a list
+
+cat1 = cats1(names2_list_cat) #name category variable "cat1"
+
+
+df_1 = pd.DataFrame(list_together, columns = ["Label", "Names"])
+df_1.insert(2, "Category", cat1, True)
+df_1
+
+#function to get the gender of the first name 
+def genderize(name): 
+    return Genderize().get([name])[0]["gender"]
+article_df['creator gender']= article_df.apply(lambda row : genderize(row["author_first_name"]),axis=1)
+print(article_df['creator gender'])
+print(article_df['creator'])
+
+
+
+#EDA get count of male v. female creators 
+sns.set_theme(style="whitegrid")
+article_df['creator gender'].value_counts().plot(kind='bar', color = ["tomato", "skyblue"])
+
+#Notes
+# The iterator seems to pick non-Western names & attribute the proper gender - i.e. "Sandali" is rightfully categorized as female. 
+# The functions get confused when there are multiple authors, we need to figure out how to deal with this 
+# New DF with name and associated gender has been created --> "df_1"
+# New function was added in order to facilitate the process of attributing personhood to a name - useful to show the name_function works 
+
+
+
+
+
+
+
+
+##OLD WORK & ORDER HERE JUST IN CASE 
 #iterator to capture the first name from the name_function outputs in a non-list format 
 
 def first_name_column_iterator (array, col_number ):
@@ -64,33 +135,7 @@ for i,j in zip(column_iterator(names2,1),column_iterator(names2,0)):
     print("First name is {}, they are a:".format(i))
     print(j)
 
-##YF add the name classification column here 
 
-#gender now added correspondingly to first name in the DF
-print(article_df)
-
-#get count of male v. female creators 
-sns.set_theme(style="whitegrid")
-article_df['creator gender'].value_counts().plot(kind='bar', color = ["tomato", "skyblue"])
-
-def genderize(name): 
-    return Genderize().get([name])[0]["gender"]
-article_df['creator gender']= article_df.apply(lambda row : genderize(row["author_first_name"]),axis=1)
-print(article_df['creator gender'])
-print(article_df['creator'])
-
-
-##WTF it picks up "None" as a "male". Maybe we pick another word to replace the NaNs. To be discussed
-
-
-
-
-
-
-
-
-
-##OLD WORK & ORDER HERE JUST IN CASE 
 #maybe for this function we need to do something to make the naming unique 
 def name_function(df_name, names):
     list_a = []
@@ -112,19 +157,6 @@ def name_function(df_name, names):
 list_A = name_function(article_df, article_df["creator"])
 article_df["name_classification"] = list_A
 article_df[["name_classification", "creator"]]
-
-
-        
-    
-
-
-
-
-
-
-
-
-
 
 
 #Just run on author name. If a name add a new 1/0 column
