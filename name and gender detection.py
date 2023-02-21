@@ -1,6 +1,11 @@
 from newsdataapi import NewsDataApiClient
 import pandas as pd
 import seaborn as sns
+import numpy as np
+import nltk
+from nltk import ne_chunk, pos_tag, word_tokenize
+from nltk.tree import Tree
+from genderize import Genderize
 #import re
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
@@ -12,7 +17,7 @@ article_df = article_df.assign(Article_Number=range(len(article_df)))
 #made some tweaks here for smoother working 
 article_df["creator"] = article_df["creator"].astype('string').replace("'", '', regex=True) #remove speech marks
 article_df["creator"] = article_df["creator"].str.strip('[]') #remove square brackets
-article_df["creator"] = article_df["creator"].fillna("none ") #added this so that NaNs won't be an issue in future ops
+article_df["creator"] = article_df["creator"].fillna("None ") #added this so that NaNs won't be an issue in future ops
 article_df['pos'] = article_df['creator'].str.find(' ')
 article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']], axis=1)
 
@@ -28,7 +33,7 @@ article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['p
 def name_function(df_name, names):
     list_a = []
     for x in names:
-        if x is None:
+        if x == "None":
             list_a.append(0)
         else: 
             nltk_results = ne_chunk(pos_tag(word_tokenize(x)))
@@ -96,11 +101,11 @@ def extracto_first_name(column):
     """
     return column.apply(lambda x: x[0] if isinstance(x, list) else x)
 
-names2_list_name = extracto_first_name(df_1["Names"])
+
 
 #create DF with labels, names, and categories
 df_1 = pd.DataFrame(np.column_stack([cat1, names2_list_name]), columns = ["Label", "Names"], dtype = object)
-
+names2_list_name = extracto_first_name(df_1["Names"])
 
 #apply genderize function to the author first name column in article_df
 def genderize(name): 
@@ -117,8 +122,8 @@ article_df[['creator', "author_first_name", 'creator gender']]
 ## publication names that have been occurring. 
 
 #function to get the gender of the first name 
-def genderize(name): 
-    return Genderize().get([name])[0]["gender"]
+#def genderize(name): 
+#    return Genderize().get([name])[0]["gender"]
 article_df['creator gender']= article_df.apply(lambda row : genderize(row["author_first_name"]),axis=1)
 print(article_df['creator gender'])
 print(article_df['creator'])
@@ -189,9 +194,7 @@ article_df[["name_classification", "creator"]]
 
 
 #Just run on author name. If a name add a new 1/0 column
-import nltk
-from nltk import ne_chunk, pos_tag, word_tokenize
-from nltk.tree import Tree
+
 
 sample = "John was a nice guy and had a friend named Earl"
 text = article_df["creator"][0]
