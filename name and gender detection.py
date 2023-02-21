@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream
 from newsdataapi import NewsDataApiClient
 import pandas as pd
 import seaborn as sns
 import numpy as np
+=======
+pip3 install nltk
+>>>>>>> Stashed changes
 import nltk
 from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
