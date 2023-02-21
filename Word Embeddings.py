@@ -39,6 +39,7 @@ print(results)
 article_df = pd.json_normalize(results)
 article_df = article_df.assign(Article_Number=range(len(article_df)))
 article_df.info()
+article_df
 
 
 article_df['content'] = article_df['content'].astype(str).str.lower()
@@ -49,8 +50,9 @@ regexp = RegexpTokenizer('\w+')
 article_df['text_token']=article_df['content'].apply(regexp.tokenize)
 article_df['text_token'][[0]]
 
+model.n_similarity(Male_word_list, article_df['content'].iloc[1])
 model.n_similarity(Male_word_list, article_df['text_token'].iloc[1])
-model.n_similarity(Female_word_list, article_df['text_token'].iloc[1])
 
-model.n_similarity(Male_word_list, article_df['text_token'].iloc[0])
-model.n_similarity(Female_word_list, article_df['text_token'].iloc[0])
+model.n_similarity(Male_word_list, article_df['text_token'].iloc[8])
+model.n_similarity(Female_word_list, article_df['text_token'].iloc[8])
+
