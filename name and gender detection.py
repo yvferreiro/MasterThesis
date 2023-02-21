@@ -16,6 +16,28 @@ article_df["creator"] = article_df["creator"].fillna("none ") #added this so tha
 article_df['pos'] = article_df['creator'].str.find(' ')
 article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']], axis=1)
 
+# functiont save articles to a file 
+import pickle 
+def save_article_df(article_df, filename):
+    try:
+        # Load existing dataframe if file exists
+        saved_df = pd.read_pickle(filename)
+    except FileNotFoundError:
+        # Create a new empty dataframe if file doesn't exist
+        saved_df = pd.DataFrame()
+
+    # Append the new article dataframe to the saved dataframe
+    saved_df = saved_df.append(article_df)
+
+    # Save the updated dataframe to the file
+    saved_df.to_pickle(filename)
+
+
+#save the article 
+#article_df = pd.DataFrame({'title': ['Article 1'], 'content': ['This is a sample article.']})
+filename = "articles.pkl"
+save_article_df(article_df, filename)
+
 
 #this is how we had to write gender detection
 #article_df["creator"] = article_df["creator"].astype('string')
