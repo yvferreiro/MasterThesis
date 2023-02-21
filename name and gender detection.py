@@ -1,23 +1,36 @@
-<<<<<<< Updated upstream
 from newsdataapi import NewsDataApiClient
 import pandas as pd
 import seaborn as sns
 import numpy as np
-=======
-pip3 install nltk
->>>>>>> Stashed changes
 import nltk
 from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
 from genderize import Genderize
+import pickle 
+
 #import re
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
-response = api.news_api(q= "election", language= "en", country = "us")
+response = api.news_api(q= "fashion week", language= "en", country = "us")
 results = response['results']
 article_df = pd.json_normalize(results)
-article_df = article_df.assign(Article_Number=range(len(article_df)))
 
+def save_article_df(article_df, filename):
+    try:
+        saved_df = pd.read_pickle(filename)
+    except FileNotFoundError:
+        saved_df = pd.DataFrame()
+    saved_df = saved_df.append(article_df)
+    saved_df.to_pickle(filename)
+
+filename = "articles.pkl"
+save_article_df(article_df, filename)
+article_df = pd.read_pickle(filename)
+
+article_df = article_df.assign(Article_Number=range(len(article_df)))
+pd.set_option('display.max_rows', None)
+
+len(article_df)
 #made some tweaks here for smoother working 
 article_df["creator"] = article_df["creator"].astype('string').replace("'", '', regex=True) #remove speech marks
 article_df["creator"] = article_df["creator"].str.strip('[]') #remove square brackets
@@ -25,27 +38,8 @@ article_df["creator"] = article_df["creator"].fillna("None ") #added this so tha
 article_df['pos'] = article_df['creator'].str.find(' ')
 article_df['author_first_name'] = article_df.apply(lambda x: x['creator'][0:x['pos']], axis=1)
 
-# functiont save articles to a file 
-import pickle 
-def save_article_df(article_df, filename):
-    try:
-        # Load existing dataframe if file exists
-        saved_df = pd.read_pickle(filename)
-    except FileNotFoundError:
-        # Create a new empty dataframe if file doesn't exist
-        saved_df = pd.DataFrame()
+article_df['content']
 
-    # Append the new article dataframe to the saved dataframe
-    saved_df = saved_df.append(article_df)
-
-    # Save the updated dataframe to the file
-    saved_df.to_pickle(filename)
-
-
-#save the article 
-#article_df = pd.DataFrame({'title': ['Article 1'], 'content': ['This is a sample article.']})
-filename = "articles.pkl"
-save_article_df(article_df, filename)
 
 
 #this is how we had to write gender detection
@@ -218,6 +212,35 @@ list_A = name_function(article_df, article_df["creator"])
 article_df["name_classification"] = list_A
 article_df[["name_classification", "creator"]]
 
+#---------chatGPT suggestion--------
+import nltk
+from nltk import ne_chunk, pos_tag, word_tokenize
+
+def name_function(df_name, names):
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt')
+    try:
+        nltk.data.find('taggers/averaged_perceptron_tagger')
+    except LookupError:
+        nltk.download('averaged_perceptron_tagger')
+    
+    list_a = []
+    for x in names:
+        if x == "None":
+            list_a.append(0)
+        else:
+            nltk_results = ne_chunk(pos_tag(word_tokenize(x)))
+            list_b = []
+            for nltk_result in nltk_results:
+                if type(nltk_result) == nltk.tree.Tree:
+                    name = ''
+                    for nltk_result_leaf in nltk_result.leaves():
+                        name += nltk_result_leaf[0]
+                    list_b.append([nltk_result.label(), name])
+            list_a.append(list_b)
+    return list_a
 
 #Just run on author name. If a name add a new 1/0 column
 
