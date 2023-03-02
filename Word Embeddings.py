@@ -34,8 +34,30 @@ article_df['content'] = article_df['content'].astype('string')
 
 article_df['text_token'] = article_df.apply(lambda row: nltk.word_tokenize(row['content']), axis=1)
 
+##IDENTIFY ADJECTIVES 
+# Define a function to extract the adjectives from a text string
+def get_adjectives(text_input):
+    tokens = nltk.word_tokenize(text_input)
+    pos = nltk.pos_tag(tokens)
+    adjectives = [word for word, tag in pos if tag.startswith('JJ')]
+    return str(adjectives)
 
-##METHOD 1: PRE-TRAINED N_SIMILARITY (REALLY BASIC)
+# Apply the function to each text string in the series
+adjectives_series = article_df['content'].apply(get_adjectives)
+print(str(adjectives_series)) #transform into string for future operations 
+
+#function clean up resulting adjectives 
+def adj_complete_series(adjective_serie):
+    adj_clean = adjective_serie.str.replace(r'\b\w\b|[^\w\s]', '', regex=True) #replace single characters and whitespaces with empty string
+    adj_clean = adj_clean.str.strip().str.split('\s+') #remove whitespace
+    adj_clean = adj_clean.apply(lambda x: [word for word in x if len(word) > 1]) #remove single letter word
+    return adj_clean
+
+adjective_complete = adj_complete_series(adjectives_series)
+adjective_complete #list of adjectives identified in each article is ready 
+
+
+##METHOD 1: PRE-TRAINED FASTTEXT (REALLY BASIC) ------------------------------------------------------------------------
 model = fasttext.load_facebook_vectors(datapath(file))
 
 # The list of male and female words from the People = Men paper
@@ -62,7 +84,8 @@ pd.set_option('display.max_rows', None)
 
 
 
-## METHOD 2: PRE-TRAINED GloVe (Global Vectors)
+
+## METHOD 2: PRE-TRAINED GloVe (Global Vectors) ------------------------------------------------------------------------
 import gensim.downloader as api
 
 # Load the pre-trained GloVe vectors with 100 dimensions
@@ -73,7 +96,8 @@ similar_words = glove_vectors.most_similar("sexy")
 for word, similarity in similar_words:
     print(f"{word}: {similarity}")
 
-# importan: the model below is too big to train, but the code works when tested on one word 
+# important: the model below is too big to train, but the code works when tested on one word 
+# TO-DO - I think we should write a function identifying "gendered" words in the text and then finding the similarity to those
 # Load the pre-trained GloVe vectors with 100 dimensions
 glove_vectors = api.load("glove-wiki-gigaword-100")
 # Define a list of words for male & female 
