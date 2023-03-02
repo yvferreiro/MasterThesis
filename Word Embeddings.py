@@ -117,3 +117,25 @@ for word, similar_word_list_female in similar_words_female.items():
     print(f"Similar words to {word}:")
     for similar_word, similarity in similar_word_list_female:
         print(f"- {similar_word}: {similarity}")
+
+
+
+
+##METHOD 3: PRE-TRAINED, GOOGLE'S WORD2VEC ------------------------------------------------------------------------
+from gensim.models import Word2Vec, KeyedVectors
+# Load the pre-trained word2vec model
+file_w2vec= (r"/Users/yolandaferreirofranchi/Desktop/GoogleNews-vectors-negative300.bin") #yolanda's path 
+model_w2v = gensim.models.KeyedVectors.load_word2vec_format(file_w2vec, binary=True)
+
+# Function to find the most similar words to a given word
+def find_similar_words(word, topn=5):
+    similar_words = model_w2v.most_similar(word, topn=topn)
+    return similar_words
+
+similar_words = find_similar_words('womab')
+print(similar_words)
+
+
+
+
+##METHOD 4: PRE-TRAINED, BERT ------------------------------------------------------------------------
