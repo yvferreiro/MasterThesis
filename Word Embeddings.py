@@ -132,7 +132,7 @@ def find_similar_words(word, topn=5):
     similar_words = model_w2v.most_similar(word, topn=topn)
     return similar_words
 
-similar_words = find_similar_words('womab')
+similar_words = find_similar_words('woman')
 print(similar_words)
 
 
