@@ -8,6 +8,12 @@ stopwords = nltk.corpus.stopwords.words("english")
 file = "C:/Users/danie/Desktop/crawl-300d-2M-subword.bin"
 #file = "C:/Users/danie/Desktop/crawl-300d-2M-subword.bin"
 
+
+#can add 
+
+#import requests
+#from file_name import def_function, def_function2
+
 model = fasttext.load_facebook_vectors(datapath(file))
 
 # The list of male and female words from the People = Men paper
