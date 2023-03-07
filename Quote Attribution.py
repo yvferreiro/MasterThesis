@@ -26,15 +26,18 @@ article_df = pd.read_pickle(filename)
 
 article_df = article_df.assign(Article_Number=range(len(article_df)))
 article_df = article_df.reset_index()
-sample_article = article_df["content"].loc[42]
+sample_article = article_df["content"].loc[57]
 sample_article
-quote_db= pd.DataFrame(columns=["article_number","quote", "quote_loc"])
+article_df.drop("index",axis=1)
+quote_df= pd.DataFrame(columns=["quote", "quote_loc", "previous_sent", "next_sent"])
 
 def find_quotes(df):
     df = df.replace('“','"').replace('”','"')
-    quotes = re.findall(r'["\']([^"\']*)["\']', df)
-    indirect_quotes = ([x for x in tokenize.sent_tokenize(df) if any(y in x for y in verbs)])
-    quotes= quotes + indirect_quotes
+    quotes = re.findall(r'((?:[^.]*?\.){0,2})\s*([^"]*"[^"]*")\s*((?:\.[^.]*?){0,2})', df)
+    for quote in quotes:
+        quote_df = quote_df.append({"previous_sent": quote[0], "quote": quote[1], "next_sent": quote[2]}, ignore_index=True)
+    #quotes = re.findall(r'["\']([^"\']*)["\']', df)
+    quotes= [x for x in quotes if x.count(" ") > 3]
     quote_location = []
     for word in quotes:
         word_loc = df.find(word)
@@ -43,8 +46,58 @@ def find_quotes(df):
         quote_location.append((word_loc, word_loc2))
     return quotes, quote_location
 
-def attribute_quotes(quotes, df):
+def find_indirect_quotes(df):
+    indirect_quotes = ([x for x in tokenize.sent_tokenize(df) if any(y in x for y in verbs)])
+    indirect_quotes = [ x for x in indirect_quotes if '"' not in x ]
+    quote_location = []
+    for word in indirect_quotes:
+        word_loc = df.find(word)
+        word_len = len(word)
+        word_loc2 = word_loc + word_len
+        quote_location.append((word_loc, word_loc2))
+    return indirect_quotes, quote_location
+
+    #quotes= quotes + indirect_quotes
+
+#def attribute_quotes(quotes, df):
     
 
 find_quotes(sample_article)
-quote_db
+
+quote_df= pd.DataFrame(columns=["prev_sentence", "quote_sentence", "next_sentence"])
+
+def find_quotes_2(news_article):
+    news_article = news_article.replace('“','"').replace('”','"')
+    sentence_pattern = r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s'
+    sentences = re.split(sentence_pattern, news_article)
+    print(sentences)
+    quote_pattern = r'"(.+?)"'
+
+    matched_sentences = []
+
+    for i in range(len(sentences)):
+        if i == 0:
+            prev_sentence = None
+        else:
+            prev_sentence = sentences[i-1]  
+        curr_sentence = sentences[i]
+        if i == len(sentences)-1:
+            next_sentence = None
+        else:
+            next_sentence = sentences[i+1]
+        
+        # Check if current sentence contains a quote
+        if re.search(quote_pattern, curr_sentence):
+            quote = re.search(quote_pattern, curr_sentence).group()
+            if len(re.findall(r'\w+', quote)) >= 4:
+                matched_sentences.append({
+                    'prev_sentence': prev_sentence,
+                    'quote_sentence': curr_sentence,
+                    'next_sentence': next_sentence
+                })
+
+    df = pd.DataFrame(matched_sentences)
+    return df
+        
+find_quotes_2(sample_article)
+
