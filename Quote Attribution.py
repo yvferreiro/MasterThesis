@@ -4,7 +4,19 @@ import pickle
 import re
 from nltk import tokenize
 
-verbs= ["acknowledge", " add", " address", " admit", " announce", " argue", " believe", " claim", " conclude", " confirm", " continue", " declare", " describe", " ensure", " estimate", " explain", " find", " indicate", " inform", " insist", " note", " point", " predict", " provide", " release", " reply", " report", " respond", " say", " state", " suggest", " tell", " testify", " think", " tweet", " warn", " write"]
+reporting_words = ["acknowledge", " add", " address", " admit", " announce", " argue", " believe", " claim", " conclude", " confirm", " continue", " declare", " describe", " ensure", " estimate", " explain", " find", " indicate", " inform", " insist", " note", " point", " predict", " provide", " release", " reply", " report", " respond", " say", " state", " suggest", " tell", " testify", " think", " tweet", " warn", " write"]
+ If sent contains a reporting word then
+    look to the word before for a name or a pronoun
+        If found and a name find gender 
+            once gender is found clasify the sentence
+        if found a pronoun then classify sentence
+        else   
+            look after the word for the same and follow the same pattern
+                else follow the rest of the pattern
+Count the number of male, female, and neutral pronouns
+
+*****Look to see if the sentence contains a proper noun and add the gender to the ocunt
+    I think this should be added to the preprocessing because we are already looking up the POS tags so it will use less bullshit
 
 
 api = NewsDataApiClient(apikey="pub_158807ed74e08f77156e05324333c37f9b917")
