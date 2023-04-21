@@ -1,0 +1,434 @@
+﻿feature,weight,source
+beef,5,Violence
+sidesplitt,5,Violence
+lose,5,Violence
+scourg,5,Violence
+unresolve,5,Violence
+difficult,5,Violence
+elicit,5,Violence
+denigrate,5,Violence
+vocifer,5,Violence
+passion,5.083333333,Violence
+misgive,5.083333333,Violence
+ungovern,5.090909091,Violence
+pressure,5.1,Violence
+differ,5.111111111,Violence
+crush,5.111111111,Violence
+pointless,5.125,Violence
+swing,5.125,Violence
+hack,5.125,Violence
+anxiety,5.142857143,Violence
+pain in the ass,5.142857143,Violence
+sexual,5.142857143,Violence
+jihad,5.142857143,Violence
+author,5.142857143,Violence
+scrape,5.142857143,Violence
+indocile,5.166666667,Violence
+crass,5.166666667,Violence
+defeat,5.181818182,Violence
+cyberbully,5.2,Violence
+foeman,5.2,Violence
+policeman,5.2,Violence
+red,5.222222222,Violence
+mean,5.25,Violence
+despair,5.25,Violence
+ram,5.25,Violence
+oppose,5.272727273,Violence
+person,5.285714286,Violence
+cut down,5.285714286,Violence
+human,5.285714286,Violence
+fire,5.294117647,Violence
+command,5.307692308,Violence
+intolerate,5.333333333,Violence
+kick back,5.333333333,Violence
+polic force,5.333333333,Violence
+sentence,5.35,Violence
+screech,5.375,Violence
+round,5.375,Violence
+hamstring,5.375,Violence
+prejudice,5.4,Violence
+furor,5.411764706,Violence
+wipeout,5.428571429,Violence
+spree,5.444444444,Violence
+detention,5.454545455,Violence
+complain,5.5,Violence
+dissonance,5.5,Violence
+set on,5.545454545,Violence
+irrate,5.545454545,Violence
+evasive,5.555555556,Violence
+victimize,5.555555556,Violence
+imperialist,5.555555556,Violence
+stamp out,5.555555556,Violence
+nihilist,5.571428571,Violence
+demoralize,5.625,Violence
+discontent,5.625,Violence
+disgrace,5.636363636,Violence
+useless,5.714285714,Violence
+wittness,5.727272727,Violence
+domestic,5.75,Violence
+policemen,5.75,Violence
+wild,5.75,Violence
+kick up,5.75,Violence
+strength,5.75,Violence
+impulse,5.777777778,Violence
+accomplice,5.777777778,Violence
+annoy,5.8,Violence
+atomic,5.833333333,Violence
+intend,5.857142857,Violence
+allege,5.875,Violence
+rip,5.888888889,Violence
+dehumanize,5.888888889,Violence
+anguish,5.9,Violence
+opposite,5.909090909,Violence
+dread,6,Violence
+deprive,6,Violence
+inexplicable,6,Violence
+demise,6,Violence
+campaign,6,Violence
+undercut,6,Violence
+impatiant,6,Violence
+mown,6,Violence
+puncture,6,Violence
+resent,6,Violence
+increase,6.052631579,Violence
+unease,6.090909091,Violence
+consequence,6.090909091,Violence
+deploy,6.1,Violence
+scene,6.1,Violence
+scathe,6.1,Violence
+rebel,6.111111111,Violence
+disagree,6.125,Violence
+defend,6.125,Violence
+wipe out,6.142857143,Violence
+affray,6.142857143,Violence
+thrust,6.142857143,Violence
+dissatisfaction,6.166666667,Violence
+meaningless,6.2,Violence
+prison house,6.2,Violence
+thievery,6.222222222,Violence
+mangle,6.222222222,Violence
+disillusioned,6.222222222,Violence
+unrestrain,6.25,Violence
+troop,6.25,Violence
+extreme,6.272727273,Violence
+grief,6.272727273,Violence
+demeaning,6.333333333,Violence
+ire,6.333333333,Violence
+affect,6.363636364,Violence
+put down,6.375,Violence
+worst,6.375,Violence
+invasive,6.4,Violence
+cut off,6.4375,Violence
+encounter,6.454545455,Violence
+arm,6.48,Violence
+unmind,6.5,Violence
+loss,6.529411765,Violence
+unpredictable,6.571428571,Violence
+convict,6.571428571,Violence
+fight down,6.583333333,Violence
+struggle,6.6,Violence
+raid,6.625,Violence
+mistrust,6.625,Violence
+shameless,6.625,Violence
+corrupt,6.636363636,Violence
+worry,6.647058824,Violence
+theft,6.65,Violence
+incite,6.666666667,Violence
+guard,6.666666667,Violence
+poison,6.7,Violence
+unhappy,6.714285714,Violence
+craze,6.714285714,Violence
+bestiality,6.75,Violence
+protest,6.75,Violence
+cry,6.772727273,Violence
+uncorrect,6.777777778,Violence
+raze,6.782608696,Violence
+collid with,6.8,Violence
+force out,6.8,Violence
+cult,6.818181818,Violence
+munition,6.833333333,Violence
+serious,6.842105263,Violence
+vehement,6.857142857,Violence
+reasonless,6.857142857,Violence
+issue,6.875,Violence
+beast,6.888888889,Violence
+animosity,6.888888889,Violence
+nuclear,6.888888889,Violence
+gash,6.888888889,Violence
+trouble,6.888888889,Violence
+grave,6.909090909,Violence
+suspect,6.928571429,Violence
+hysterical,7,Violence
+fatal accid,7,Violence
+bring down,7,Violence
+face-off,7,Violence
+force-out,7,Violence
+ruin,7,Violence
+army,7,Violence
+demolition,7,Violence
+blast,7,Violence
+detest,7,Violence
+roughshod,7,Violence
+frustrat,7.083333333,Violence
+mad,7.090909091,Violence
+severed,7.1,Violence
+perpetrate,7.105263158,Violence
+damage,7.111111111,Violence
+investigate,7.125,Violence
+charge,7.125,Violence
+burglary,7.125,Violence
+behavior,7.2,Violence
+jab,7.2,Violence
+slice,7.2,Violence
+machete,7.2,Violence
+inmate,7.2,Violence
+tear,7.235294118,Violence
+take down,7.25,Violence
+belt down,7.25,Violence
+snap,7.272727273,Violence
+foe,7.272727273,Violence
+fright,7.285714286,Violence
+collision,7.285714286,Violence
+die,7.315789474,Violence
+yell,7.321428571,Violence
+bite,7.333333333,Violence
+trigger-happy,7.363636364,Violence
+target area,7.363636364,Violence
+imprison,7.375,Violence
+shoot down,7.428571429,Violence
+wrongdoer,7.428571429,Violence
+irate,7.428571429,Violence
+intent,7.444444444,Violence
+mindless,7.461538462,Violence
+smasher,7.5,Violence
+risk,7.5,Violence
+fought,7.5,Violence
+pain sensation,7.526315789,Violence
+adversary,7.545454545,Violence
+tense,7.555555556,Violence
+inflame,7.555555556,Violence
+incapacite,7.555555556,Violence
+harass,7.56,Violence
+showdown,7.571428571,Violence
+military unit,7.583333333,Violence
+decease,7.6,Violence
+dissensentt,7.6,Violence
+fight back,7.6,Violence
+crusade,7.6,Violence
+dispute,7.608695652,Violence
+hassle,7.625,Violence
+loot,7.666666667,Violence
+peril,7.666666667,Violence
+vandal,7.666666667,Violence
+homicid,7.714285714,Violence
+spite,7.727272727,Violence
+innocent people,7.727272727,Violence
+worse,7.727272727,Violence
+target,7.742857143,Violence
+soldier,7.75,Violence
+detriment,7.75,Violence
+scuffle,7.761904762,Violence
+incident,7.782608696,Violence
+radical,7.818181818,Violence
+shriek,7.85,Violence
+bitter,7.857142857,Violence
+uncontrol,7.863636364,Violence
+injured party,7.875,Violence
+jealousy,7.875,Violence
+suicide,7.875,Violence
+vicious,7.875,Violence
+inflict,7.875,Violence
+snipe,7.888888889,Violence
+push,7.888888889,Violence
+power,7.888888889,Violence
+wrath,7.9,Violence
+stress,7.909090909,Violence
+combat-ready,7.916666667,Violence
+criminal,7.941176471,Violence
+provoke,8,Violence
+kidnap,8,Violence
+racist,8,Violence
+offence,8,Violence
+displeasure,8,Violence
+thief,8,Violence
+agitate,8,Violence
+plan of attack,8,Violence
+outrage,8,Violence
+shrapnel,8,Violence
+mele,8,Violence
+demolish,8.055555556,Violence
+maim,8.1,Violence
+molest,8.1,Violence
+confront,8.111111111,Violence
+slash,8.117647059,Violence
+destroy,8.125,Violence
+jail,8.125,Violence
+aggravate,8.125,Violence
+pulverize,8.125,Violence
+culprit,8.136363636,Violence
+cut,8.142857143,Violence
+trial,8.142857143,Violence
+senseless,8.142857143,Violence
+escalate,8.157894737,Violence
+traffic,8.2,Violence
+fear,8.210526316,Violence
+threat,8.217391304,Violence
+missile,8.238095238,Violence
+gunman,8.25,Violence
+abduct,8.25,Violence
+ambush,8.25,Violence
+military force,8.25,Violence
+out-of-control,8.25,Violence
+racism,8.25,Violence
+bad,8.263157895,Violence
+grievous,8.285714286,Violence
+criminalize,8.3,Violence
+enemy,8.3,Violence
+law,8.333333333,Violence
+felony,8.375,Violence
+endanger,8.375,Violence
+oppressor,8.4,Violence
+oppress,8.428571429,Violence
+police,8.428571429,Violence
+gunshot,8.428571429,Violence
+savage,8.444444444,Violence
+shout,8.444444444,Violence
+onslaught,8.454545455,Violence
+disgust,8.454545455,Violence
+fatal,8.473684211,Violence
+aggressive,8.5,Violence
+strike,8.523809524,Violence
+slay,8.555555556,Violence
+afraid,8.555555556,Violence
+obliterate,8.555555556,Violence
+distress,8.555555556,Violence
+arrest,8.571428571,Violence
+explode,8.6,Violence
+combat injury,8.6,Violence
+unruly,8.6,Violence
+bleed,8.625,Violence
+suffer,8.647058824,Violence
+ruthless,8.666666667,Violence
+unsafe,8.666666667,Violence
+mayhem,8.666666667,Violence
+trauma,8.666666667,Violence
+altercation,8.681818182,Violence
+barbaric,8.7,Violence
+state of war,8.7,Violence
+grab,8.7,Violence
+put to death,8.7,Violence
+military group,8.7,Violence
+prey,8.7,Violence
+destruct,8.708333333,Violence
+dead,8.727272727,Violence
+kick,8.742857143,Violence
+death,8.75,Violence
+force,8.76,Violence
+bang,8.777777778,Violence
+rape,8.777777778,Violence
+burn,8.777777778,Violence
+riot,8.789473684,Violence
+bully,8.8,Violence
+devaste,8.8,Violence
+bloody,8.818181818,Violence
+explosive,8.818181818,Violence
+prison,8.833333333,Violence
+tension,8.882352941,Violence
+felon,8.882352941,Violence
+hit,8.884615385,Violence
+angry,8.909090909,Violence
+knife,8.916666667,Violence
+scream,8.928571429,Violence
+pain,8.931034483,Violence
+casualty,8.947368421,Violence
+weapon,9,Violence
+threaten,9,Violence
+bloodthirsty,9,Violence
+warfare,9,Violence
+offend,9,Violence
+puncher,9,Violence
+artillery,9,Violence
+fierce,9,Violence
+grenade,9,Violence
+gun,9,Violence
+brutish,9,Violence
+execute,9,Violence
+smash,9,Violence
+arson,9,Violence
+lash out,9,Violence
+wound,9.028571429,Violence
+battle,9.068965517,Violence
+hate,9.090909091,Violence
+hostile,9.111111111,Violence
+gang,9.111111111,Violence
+danger,9.125,Violence
+bump off,9.125,Violence
+military,9.125,Violence
+harsh,9.125,Violence
+gunmen,9.125,Violence
+harm,9.138888889,Violence
+ammunition,9.142857143,Violence
+horrific,9.142857143,Violence
+combat,9.15,Violence
+kill,9.151515152,Violence
+assailant,9.153846154,Violence
+intimidate,9.181818182,Violence
+personnel casualty,9.2,Violence
+shot,9.222222222,Violence
+rampage,9.222222222,Violence
+weaponry,9.222222222,Violence
+see red,9.235294118,Violence
+criminal offence,9.25,Violence
+struck,9.25,Violence
+sicken,9.25,Violence
+weapon system,9.25,Violence
+attack,9.263157895,Violence
+victim,9.266666667,Violence
+stab,9.28,Violence
+unrelent,9.3,Violence
+terrorize,9.3,Violence
+cruel,9.3,Violence
+life-threaten,9.307692308,Violence
+aggressor,9.315789474,Violence
+injure,9.315789474,Violence
+rapist,9.333333333,Violence
+mutilate,9.333333333,Violence
+blood,9.333333333,Violence
+fury,9.363636364,Violence
+brawl,9.368421053,Violence
+terrorist,9.375,Violence
+anger,9.375,Violence
+murder,9.382978723,Violence
+warhead,9.428571429,Violence
+bomb,9.433333333,Violence
+abuse,9.444444444,Violence
+bomber,9.454545455,Violence
+hurt,9.461538462,Violence
+war,9.470588235,Violence
+punch,9.485714286,Violence
+act of terror,9.5,Violence
+bruise,9.5,Violence
+assault,9.5,Violence
+robbery,9.5,Violence
+violent death,9.545454545,Violence
+hatred,9.555555556,Violence
+brute,9.571428571,Violence
+crime,9.578947368,Violence
+bullet,9.6,Violence
+terror,9.647058824,Violence
+injury,9.65,Violence
+gore,9.666666667,Violence
+knife thrust,9.692307692,Violence
+violent disord,9.7,Violence
+terrorist act,9.714285714,Violence
+shoot,9.71875,Violence
+brutal,9.722222222,Violence
+fight,9.75862069,Violence
+menace,9.857142857,Violence
+outburst,9.875,Violence
+rage,10,Violence
+conflict,10,Violence
+law-break,10,Violence
+bloodshed,10,Violence
+violence,10,Violence
+violent,10,Violence
