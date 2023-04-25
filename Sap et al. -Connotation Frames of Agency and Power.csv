@@ -7,14 +7,12 @@ accelerates,agency_pos,power_agent
 accepts,agency_neg,power_agent
 accesses,agency_equal,power_agent
 accommodates,agency_pos,power_equal
-accompanies,agency_equal,power_theme
 accomplishes,agency_pos,power_equal
 accords,agency_pos,power_agent
 accounts,agency_equal,power_agent
 accumulates,agency_equal,power_agent
 accuses,agency_pos,power_agent
 aches,agency_neg,
-achieves,agency_pos,power_theme
 acknowledges,agency_neg,power_agent
 acquaints,agency_pos,power_agent
 acquires,agency_pos,power_agent
@@ -27,11 +25,7 @@ adds,agency_pos,power_agent
 adjoins,agency_pos,power_agent
 adjusts,agency_pos,power_agent
 administers,agency_pos,power_agent
-admires,agency_equal,power_theme
-admits,agency_pos,power_theme
 adopts,agency_pos,power_agent
-adores,agency_equal,power_theme
-adorns,agency_pos,power_theme
 advances,agency_pos,power_agent
 advertises,agency_equal,power_agent
 advises,agency_pos,power_agent
@@ -41,9 +35,7 @@ affirms,agency_pos,power_agent
 affixes,agency_pos,power_agent
 affords,agency_equal,power_agent
 ages,agency_neg,
-aggravates,agency_pos,power_theme
 agonizes,agency_neg,
-agonizes over,agency_equal,power_theme
 agrees,agency_equal,
 agrees on,agency_pos,power_equal
 aids,agency_pos,power_agent
@@ -55,23 +47,15 @@ allows,agency_pos,power_agent
 alters,agency_pos,power_agent
 ambles,agency_pos,
 amends,agency_pos,power_agent
-amuses,agency_pos,power_theme
 analyzes,agency_neg,power_equal
 anchors,agency_pos,power_agent
 angers,agency_equal,power_equal
 angles,agency_equal,
 animates,agency_equal,power_equal
-announces,agency_pos,power_theme
 annoys,agency_pos,power_agent
-answers,agency_equal,power_theme
 anticipates,agency_pos,power_equal
-apologizes,agency_pos,power_theme
-apologizes to,agency_pos,power_theme
 appals,agency_equal,power_agent
-appeals,agency_neg,power_theme
-appeals to,agency_pos,power_theme
 appears,agency_pos,
-applauds,agency_pos,power_theme
 applies,agency_pos,power_agent
 applies to,agency_neg,power_equal
 appoints,agency_pos,power_agent
@@ -88,15 +72,12 @@ arouses,agency_pos,power_agent
 arranges,agency_pos,power_agent
 arrests,agency_pos,power_agent
 arrives,agency_equal,
-ascends,agency_pos,power_theme
-asks,agency_pos,power_theme
 assails,agency_pos,power_agent
 assaults,agency_pos,power_agent
 assembles,agency_pos,power_equal
 asserts,agency_pos,power_agent
 assesses,agency_pos,power_equal
 assigns,agency_pos,power_agent
-assists,agency_pos,power_theme
 associates,agency_pos,power_equal
 assumes,agency_neg,power_agent
 assures,agency_pos,power_agent
@@ -105,13 +86,11 @@ attaches,agency_pos,power_agent
 attaches to,agency_pos,power_agent
 attacks,agency_pos,power_agent
 attempts,agency_pos,power_equal
-attends,agency_equal,power_theme
 attracts,agency_equal,power_equal
 attributes,agency_neg,power_agent
 authorizes,agency_pos,power_agent
 averts,agency_pos,power_agent
 avoids,agency_pos,power_agent
-awaits,agency_neg,power_theme
 awakens,agency_pos,power_agent
 awakes,agency_pos,
 awards,agency_pos,power_agent
@@ -143,19 +122,13 @@ beams,agency_pos,
 bears,agency_pos,power_equal
 beats,agency_pos,power_agent
 beckons,agency_pos,power_agent
-becomes,agency_pos,power_theme
 beeps,agency_pos,power_equal
 begins,agency_pos,power_equal
-begs,agency_pos,power_theme
 behaves,agency_equal,
-beholds,agency_equal,power_theme
 belches,agency_pos,
-believes,agency_neg,power_theme
 bellows,agency_pos,power_agent
-belongs to,agency_neg,power_theme
 belts,agency_pos,power_agent
 bends,agency_pos,power_agent
-benefits,agency_neg,power_theme
 besieges,agency_pos,power_agent
 betrays,agency_pos,power_agent
 bets,agency_pos,power_equal
@@ -204,7 +177,6 @@ bounces,agency_pos,
 bounds,agency_pos,power_agent
 bowls,agency_pos,
 bows,agency_pos,
-bows to,agency_neg,power_theme
 boxes,agency_pos,power_agent
 braces,agency_pos,power_agent
 brakes,agency_pos,
@@ -212,7 +184,6 @@ brandishes,agency_pos,power_equal
 breaks,agency_pos,power_agent
 breathes,agency_neg,
 breeds,agency_pos,power_agent
-briefs,agency_equal,power_theme
 brightens,agency_pos,power_agent
 brims,agency_pos,
 brings,agency_pos,power_agent
@@ -220,9 +191,7 @@ bristles,agency_equal,
 broadcasts,agency_pos,power_agent
 broadens,agency_pos,power_equal
 broods,agency_neg,
-browses,agency_pos,power_theme
 bruises,agency_pos,power_agent
-brushes,agency_pos,power_theme
 bubbles,agency_pos,
 buckles up,agency_pos,power_agent
 bucks,agency_pos,power_agent
@@ -245,7 +214,6 @@ buzzes,agency_pos,
 cages,agency_pos,power_agent
 cakes,agency_pos,
 calculates,agency_pos,power_equal
-calls,agency_pos,power_theme
 calms,agency_pos,power_equal
 camps,agency_pos,
 cancels,agency_pos,power_agent
@@ -264,31 +232,26 @@ causes,agency_pos,power_agent
 cautions,agency_equal,power_agent
 caves,agency_neg,
 ceases,agency_neg,power_agent
-celebrates,agency_pos,power_theme
 centers,agency_pos,power_agent
 centers on,agency_pos,power_equal
 chains,agency_pos,power_agent
 chalks,agency_pos,power_agent
 challenges,agency_pos,power_agent
 changes,agency_pos,power_agent
-chants,agency_pos,power_theme
 characterizes,agency_equal,power_agent
 charges,agency_pos,power_agent
 charms,agency_pos,power_agent
 chars,agency_pos,power_agent
-chases,agency_pos,power_theme
 chats,agency_pos,
 chatters,agency_pos,
 cheats,agency_pos,power_agent
 checks,agency_equal,power_agent
-cheers,agency_pos,power_theme
 chews,agency_pos,power_agent
 chills,agency_equal,power_agent
 chimes,agency_neg,
 chips,agency_pos,power_agent
 chirps,agency_equal,
 chokes,agency_pos,power_agent
-chokes on,agency_neg,power_theme
 chooses,agency_pos,power_agent
 chops,agency_pos,power_agent
 chuckles,agency_pos,
@@ -297,7 +260,6 @@ chugs,agency_pos,power_agent
 churns,agency_pos,power_equal
 circles,agency_pos,power_agent
 circulates,agency_pos,power_agent
-cites,agency_pos,power_theme
 claims,agency_pos,power_agent
 clambers,agency_pos,
 clamps,agency_pos,power_agent
@@ -313,7 +275,6 @@ clears,agency_pos,power_agent
 clenches,agency_pos,power_agent
 clicks,agency_pos,power_agent
 climbs,agency_pos,power_equal
-clings to,agency_pos,power_theme
 clinks,agency_equal,
 clips,agency_pos,power_agent
 cloaks,agency_equal,power_agent
@@ -329,7 +290,6 @@ coats,agency_pos,power_agent
 coaxes,agency_pos,power_equal
 coils,agency_pos,power_agent
 collapses,agency_pos,power_agent
-collects,agency_pos,power_theme
 collides,agency_pos,
 collides with,agency_pos,power_agent
 colors,agency_pos,power_equal
@@ -338,7 +298,6 @@ combs,agency_pos,power_agent
 comes,agency_pos,
 comforts,agency_pos,power_agent
 commands,agency_pos,power_agent
-commemorates,agency_pos,power_theme
 commences,agency_pos,power_agent
 comments,agency_pos,power_equal
 commissions,agency_pos,power_agent
@@ -346,21 +305,15 @@ commits,agency_pos,power_agent
 communicates,agency_equal,power_agent
 compares,agency_equal,power_equal
 compels,agency_pos,power_agent
-compensates,agency_pos,power_theme
 competes,agency_pos,
-compiles,agency_pos,power_theme
 complains,agency_pos,
 completes,agency_pos,power_equal
 complicates,agency_pos,power_equal
 complies,agency_pos,
 composes,agency_pos,power_agent
-comprehends,agency_pos,power_theme
 compromises,agency_pos,power_equal
 conceals,agency_pos,power_equal
-concedes,agency_pos,power_theme
 conceives,agency_pos,power_agent
-concentrates,agency_equal,power_theme
-concentrates on,agency_pos,power_theme
 concerns,agency_equal,power_equal
 concludes,agency_pos,power_agent
 condemns,agency_pos,power_agent
@@ -372,15 +325,11 @@ confirms,agency_pos,power_equal
 confiscates,agency_pos,power_agent
 confronts,agency_pos,power_equal
 confuses,agency_pos,power_agent
-congratulates,agency_equal,power_theme
 connects,agency_pos,power_agent
 conquers,agency_pos,power_agent
 considers,agency_neg,power_equal
-consists of,agency_neg,power_theme
 consoles,agency_pos,power_equal
-constitutes,agency_neg,power_theme
 constructs,agency_pos,power_agent
-consults,agency_pos,power_theme
 consumes,agency_pos,power_agent
 contacts,agency_pos,power_equal
 contains,agency_pos,power_agent
@@ -389,10 +338,8 @@ contemplates,agency_neg,power_equal
 contests,agency_pos,power_agent
 continues,agency_pos,power_equal
 contorts,agency_pos,power_agent
-contracts,agency_pos,power_theme
 contradicts,agency_pos,power_agent
 contrasts,agency_pos,power_equal
-contributes,agency_pos,power_theme
 controls,agency_pos,power_agent
 convenes,agency_pos,power_agent
 converges,agency_equal,
@@ -406,7 +353,6 @@ cooks,agency_pos,power_equal
 cools,agency_neg,power_equal
 cooperates,agency_equal,
 coordinates,agency_pos,power_agent
-copies,agency_pos,power_theme
 cops,agency_pos,power_agent
 corners,agency_pos,power_agent
 corrects,agency_pos,power_agent
@@ -423,14 +369,12 @@ cowers,agency_neg,
 crackles,agency_pos,power_agent
 cracks,agency_pos,power_agent
 cradles,agency_pos,power_agent
-crams,agency_pos,power_theme
 cranes,agency_pos,power_equal
 cranks,agency_pos,power_agent
 crashes,agency_pos,power_agent
 crawls,agency_pos,
 creaks,agency_equal,
 creates,agency_pos,power_agent
-credits,agency_pos,power_theme
 creeps,agency_equal,
 crests,agency_equal,
 cries,agency_equal,
@@ -485,14 +429,11 @@ deems,agency_pos,power_agent
 deepens,agency_pos,power_equal
 defeats,agency_pos,power_agent
 defends,agency_pos,power_agent
-defers,agency_equal,power_theme
-defers to,agency_neg,power_theme
 defies,agency_pos,power_agent
 defines,agency_pos,power_equal
 deflates,agency_pos,power_agent
 deflects,agency_pos,power_agent
 delays,agency_pos,power_agent
-delights,agency_pos,power_theme
 delivers,agency_pos,power_agent
 demands,agency_pos,power_agent
 demolishes,agency_pos,power_agent
@@ -500,9 +441,7 @@ demonstrates,agency_pos,power_agent
 denies,agency_pos,power_agent
 denounces,agency_pos,power_agent
 dents,agency_pos,power_agent
-departs,agency_pos,power_theme
 depends,agency_neg,
-depends on,agency_neg,power_theme
 depicts,agency_pos,power_agent
 deploys,agency_pos,power_agent
 deposes,agency_pos,power_agent
@@ -516,12 +455,10 @@ deserts,agency_pos,power_agent
 deserves,agency_neg,power_equal
 designates,agency_pos,power_agent
 designs,agency_pos,power_agent
-desires,agency_neg,power_theme
 despises,agency_pos,power_equal
 destroys,agency_pos,power_agent
 detaches,agency_pos,power_agent
 detains,agency_pos,power_agent
-detects,agency_pos,power_theme
 determines,agency_pos,power_agent
 deters,agency_pos,power_agent
 detonates,agency_pos,power_agent
@@ -542,7 +479,6 @@ dips,agency_pos,power_agent
 directs,agency_pos,power_agent
 disagrees,agency_pos,
 disappears,agency_pos,
-disappoints,agency_pos,power_theme
 disapproves of,agency_equal,power_agent
 disarms,agency_pos,power_agent
 disbelieves,agency_pos,power_agent
@@ -589,7 +525,6 @@ dodges,agency_pos,power_agent
 does,agency_pos,power_agent
 dogs,agency_equal,power_agent
 dominates,agency_pos,power_agent
-donates,agency_pos,power_theme
 dons,agency_pos,power_agent
 dooms,agency_pos,power_agent
 dots,agency_pos,power_agent
@@ -603,8 +538,6 @@ drags,agency_pos,power_agent
 drains,agency_pos,power_agent
 drapes,agency_pos,power_agent
 draws,agency_pos,power_agent
-dreads,agency_neg,power_theme
-dreams,agency_neg,power_theme
 drenches,agency_pos,power_agent
 dresses,agency_pos,power_agent
 dribbles,agency_pos,power_agent
@@ -620,21 +553,17 @@ drops,agency_pos,power_agent
 drowns,agency_pos,power_agent
 drugs,agency_pos,power_agent
 drums,agency_pos,
-ducks,agency_pos,power_theme
 dumps,agency_pos,power_agent
 dusts,agency_pos,power_agent
 dwarfs,agency_neg,power_agent
-dwells,agency_equal,power_theme
 earns,agency_pos,power_equal
 eases,agency_pos,power_equal
 eats,agency_pos,power_agent
-echoes,,power_theme
 echos,agency_equal,
 edges,agency_pos,power_agent
 edits,agency_pos,power_agent
 educates,agency_pos,power_agent
 ejects,agency_pos,power_agent
-elaborates,agency_pos,power_theme
 elbows,agency_pos,power_agent
 elects,agency_pos,power_agent
 elevates,agency_pos,power_equal
@@ -646,7 +575,6 @@ emblazons,agency_pos,power_agent
 embraces,agency_pos,power_agent
 embroiders,agency_pos,power_agent
 emerges,agency_pos,
-emits,agency_pos,power_theme
 emphasizes,agency_pos,power_agent
 employs,agency_pos,power_agent
 empties,agency_pos,power_agent
@@ -660,23 +588,18 @@ encourages,agency_pos,power_agent
 endangers,agency_equal,power_equal
 endorses,agency_pos,power_equal
 ends,agency_pos,power_agent
-endures,agency_neg,power_theme
-enforces,agency_pos,power_theme
 engages,agency_pos,power_agent
 engraves,agency_pos,power_agent
 engrosses,agency_pos,power_agent
 engulfs,agency_pos,power_agent
 enhances,agency_pos,power_agent
-enjoys,agency_neg,power_theme
 enlists,agency_pos,power_agent
 enrages,agency_pos,power_agent
 enriches,agency_pos,power_agent
 ensures,agency_pos,power_agent
 enters,agency_pos,power_agent
-entertains,agency_pos,power_theme
 entitles,agency_equal,power_agent
 envelops,agency_pos,power_agent
-envies,agency_equal,power_theme
 envisions,agency_equal,power_agent
 equips,agency_pos,power_agent
 erases,agency_pos,power_agent
@@ -690,7 +613,6 @@ establishes,agency_pos,power_agent
 estimates,agency_neg,power_equal
 etches,agency_pos,power_agent
 evacuates,agency_pos,power_agent
-evades,agency_pos,power_theme
 evaluates,agency_pos,power_agent
 evolves,agency_pos,
 exaggerates,agency_pos,power_equal
@@ -711,8 +633,6 @@ exits,agency_pos,power_equal
 expands,agency_pos,power_agent
 expects,agency_neg,power_agent
 expels,agency_pos,power_agent
-experiences,agency_neg,power_theme
-explains,agency_pos,power_theme
 explodes,agency_pos,
 exploits,agency_pos,power_agent
 explores,agency_pos,power_agent
@@ -721,7 +641,6 @@ expresses,agency_equal,power_agent
 extends,agency_pos,power_agent
 extinguishes,agency_pos,power_agent
 extracts,agency_pos,power_agent
-eyeballs,agency_pos,power_theme
 eyes,agency_equal,power_agent
 faces,agency_neg,power_equal
 fades,agency_neg,
@@ -731,15 +650,12 @@ fakes,agency_pos,power_equal
 fakes out,agency_pos,power_agent
 falls,agency_pos,
 falters,agency_neg,
-fancies,agency_neg,power_theme
-fans,agency_pos,power_theme
 farts,agency_neg,
 fascinates,agency_neg,power_agent
 fashions,agency_pos,power_agent
 fastens,agency_pos,power_agent
 fasts,agency_pos,
 favors,agency_pos,power_equal
-fears,agency_neg,power_theme
 features,agency_neg,power_agent
 feeds,agency_pos,power_agent
 feels,agency_equal,power_equal
@@ -753,7 +669,6 @@ fidgets,agency_equal,
 fights,agency_pos,power_equal
 figures,agency_pos,power_equal
 files,agency_pos,power_equal
-fills,agency_pos,power_theme
 films,agency_pos,power_equal
 filters,agency_pos,power_agent
 finances,agency_pos,power_agent
@@ -762,10 +677,8 @@ fingers,agency_pos,power_agent
 finishes,agency_pos,power_equal
 fires,agency_pos,power_agent
 fires at,agency_pos,power_agent
-fishes for,agency_pos,power_theme
 fishtails,agency_equal,power_agent
 fits,agency_pos,power_agent
-fixates on,agency_neg,power_theme
 fixes,agency_pos,power_agent
 flags,agency_pos,power_agent
 flails,agency_equal,
@@ -792,9 +705,7 @@ flows,agency_neg,
 flushes,agency_pos,power_agent
 flutters,agency_pos,
 focuses,agency_pos,
-focuses on,agency_equal,power_theme
 folds,agency_pos,power_agent
-follows,agency_neg,power_theme
 fondles,agency_pos,power_agent
 fools,agency_pos,power_agent
 forbids,agency_pos,power_agent
@@ -817,13 +728,11 @@ frowns,agency_pos,
 frustrates,agency_pos,power_equal
 fuels,agency_equal,power_agent
 fulfills,agency_pos,power_equal
-fulfils,agency_pos,power_theme
 fumbles,agency_equal,
 fumes,agency_pos,
 functions,agency_pos,
 furnishes,agency_pos,power_agent
 furrows,agency_equal,power_agent
-fusses over,agency_pos,power_theme
 gags,agency_pos,power_agent
 gags on,agency_neg,power_agent
 gains,agency_pos,power_agent
@@ -863,8 +772,6 @@ grants,agency_pos,power_agent
 grapples with,agency_pos,power_equal
 grasps,agency_equal,power_agent
 grazes,agency_pos,power_agent
-greets,agency_equal,power_theme
-grieves,agency_neg,power_theme
 grills,agency_pos,power_agent
 grimaces,agency_neg,
 grinds,agency_pos,power_agent
@@ -881,14 +788,12 @@ grows,agency_pos,
 grumbles,agency_pos,
 grunts,agency_pos,
 guarantees,agency_pos,power_agent
-guards,agency_pos,power_theme
 guesses,agency_neg,power_equal
 guides,agency_pos,power_agent
 gulps,agency_pos,power_agent
 gushes,agency_equal,
 gyrates,agency_pos,
 hacks,agency_pos,power_agent
-hails,agency_pos,power_theme
 halts,agency_pos,power_agent
 hammers,agency_pos,power_agent
 hampers,agency_pos,power_agent
@@ -900,14 +805,12 @@ happens,agency_neg,
 harasses,agency_pos,power_agent
 hardens,agency_pos,power_equal
 harms,agency_pos,power_agent
-hates,agency_neg,power_theme
 hauls,agency_pos,power_equal
 haunts,agency_neg,power_agent
 haves,agency_neg,power_agent
 heads,agency_pos,
 heals,agency_pos,power_agent
 heaps,agency_pos,power_agent
-hears,agency_neg,power_theme
 heats,agency_pos,power_agent
 heaves,agency_pos,power_agent
 hefts,agency_pos,power_agent
@@ -927,9 +830,7 @@ hoists,agency_pos,power_equal
 holds,agency_pos,power_agent
 hollers,agency_pos,power_agent
 honks,agency_pos,
-honors,agency_pos,power_theme
 hooks,agency_pos,power_agent
-hopes,agency_equal,power_theme
 hops,agency_pos,
 horrifies,agency_equal,power_agent
 houses,agency_pos,power_agent
@@ -958,24 +859,20 @@ ignores,agency_pos,power_agent
 illuminates,agency_pos,power_equal
 illustrates,agency_pos,power_equal
 imagines,agency_equal,power_equal
-imitates,agency_equal,power_theme
 immerses,agency_pos,power_agent
 immobilizes,agency_pos,power_agent
 impales,agency_pos,power_agent
 implements,agency_pos,power_agent
 implies,agency_neg,power_agent
-implores,agency_pos,power_theme
 imposes,agency_pos,power_agent
 impresses,agency_neg,power_equal
 improves,agency_pos,power_agent
 improvises,agency_pos,
 inches,agency_equal,
 includes,agency_pos,power_agent
-incorporates,agency_pos,power_theme
 increases,agency_pos,power_agent
 indicates,agency_pos,power_equal
 induces,agency_pos,power_agent
-indulges,agency_equal,power_theme
 infects,agency_pos,power_equal
 inflicts,agency_pos,power_agent
 influences,agency_pos,power_agent
@@ -999,7 +896,6 @@ integrates,agency_pos,power_agent
 intends,agency_neg,power_equal
 intensifies,agency_pos,power_agent
 intercepts,agency_pos,power_agent
-interests,agency_neg,power_theme
 interferes,agency_pos,
 interprets,agency_pos,power_equal
 interrogates,agency_pos,power_agent
@@ -1026,11 +922,9 @@ jams,agency_pos,power_agent
 jars,agency_pos,power_agent
 jiggles,agency_pos,power_agent
 jogs,agency_pos,
-joins,agency_pos,power_theme
 jokes,agency_equal,
 jolts,agency_pos,power_agent
 jostles,agency_pos,power_agent
-jots,agency_pos,power_theme
 judges,agency_pos,power_agent
 juggles,agency_pos,power_agent
 jumps,agency_pos,
@@ -1051,7 +945,6 @@ knows,agency_neg,power_agent
 labels,agency_pos,power_equal
 labors,agency_pos,
 laces,agency_pos,power_agent
-lacks,agency_neg,power_theme
 lags,agency_neg,
 lands,agency_pos,
 laps,agency_pos,power_agent
@@ -1066,7 +959,6 @@ leafs,agency_pos,power_agent
 leaks,agency_pos,power_equal
 leans,agency_pos,
 leaps,agency_pos,
-learns,agency_equal,power_theme
 leaves,agency_equal,power_agent
 lectures,agency_pos,power_agent
 leers,agency_neg,
@@ -1080,13 +972,11 @@ lies to,agency_pos,power_equal
 lifts,agency_pos,power_agent
 lightens,agency_pos,power_agent
 lights,agency_pos,power_agent
-likes,agency_equal,power_theme
 limits,agency_pos,power_agent
 limps,agency_neg,
 lines,agency_pos,power_equal
 lingers,agency_neg,
 links,agency_pos,power_equal
-listens,agency_pos,power_theme
 lists,agency_pos,power_equal
 litters,agency_pos,power_agent
 lives,agency_equal,power_equal
@@ -1102,11 +992,9 @@ loops,agency_pos,power_agent
 loosens,agency_pos,power_agent
 looses,agency_pos,power_agent
 lops,agency_pos,power_agent
-loses,agency_equal,power_theme
 lounges,agency_neg,
 loves,agency_pos,power_equal
 lowers,agency_pos,power_agent
-lugs,agency_pos,power_theme
 lumbers,agency_pos,
 lunges,agency_pos,
 lurches,agency_pos,power_agent
@@ -1126,10 +1014,8 @@ manufactures,agency_pos,power_agent
 marches,agency_equal,
 marks,agency_pos,power_agent
 marries,agency_pos,power_equal
-marvels at,agency_equal,power_theme
 mashes,agency_pos,power_agent
 masks,agency_pos,power_agent
-massages,agency_pos,power_theme
 matches,agency_pos,power_equal
 materializes,agency_neg,
 mats,agency_equal,power_agent
@@ -1141,20 +1027,13 @@ meets,agency_pos,power_equal
 melts,agency_pos,power_agent
 memorizes,agency_equal,power_equal
 mends,agency_pos,power_agent
-mentions,agency_equal,power_theme
 merges,agency_pos,power_agent
 mesmerizes,agency_equal,power_agent
 messes up,agency_pos,power_agent
 mills,agency_pos,
-mimes,agency_pos,power_theme
-mimics,agency_pos,power_theme
-minds,agency_equal,power_theme
-mingles,agency_pos,power_theme
 minimizes,agency_pos,power_agent
 mirrors,agency_equal,power_agent
-misses,agency_neg,power_theme
 mistakes,agency_equal,power_equal
-misunderstands,agency_neg,power_theme
 mixes,agency_pos,power_agent
 moans,agency_pos,
 mobilizes,agency_pos,power_agent
@@ -1187,37 +1066,27 @@ names,agency_pos,power_agent
 narrows,agency_pos,power_equal
 navigates,agency_pos,power_agent
 nears,agency_pos,power_equal
-needs,agency_neg,power_theme
 neglects,agency_equal,power_agent
 negotiates,agency_pos,power_agent
 nestles,agency_pos,power_agent
 nibbles,agency_pos,power_agent
 nods,agency_pos,
-nods to,agency_pos,power_theme
 nominates,agency_pos,power_agent
 noses,agency_pos,power_agent
-notes,agency_equal,power_theme
 notices,agency_equal,power_equal
 notifies,agency_pos,power_agent
 nudges,agency_pos,power_equal
 numbers,agency_pos,power_equal
 nurses,agency_pos,power_agent
-nuzzles,agency_pos,power_theme
-obeys,agency_neg,power_theme
 objects,agency_pos,
-objects to,agency_pos,power_theme
-obliges,agency_equal,power_theme
 obliterates,agency_pos,power_agent
 obscures,agency_pos,power_agent
 observes,agency_neg,power_equal
-obsesses over,agency_equal,power_theme
 obstructs,agency_pos,power_agent
 obtains,agency_pos,power_agent
 occupies,agency_pos,power_agent
 occurs,agency_neg,
-offends,agency_pos,power_theme
 offers,agency_pos,power_agent
-offers to,agency_pos,power_theme
 omits,agency_pos,power_agent
 oozes,agency_equal,power_equal
 opens,agency_pos,power_agent
@@ -1226,7 +1095,6 @@ opposes,agency_pos,power_equal
 orders,agency_pos,power_agent
 organizes,agency_pos,power_agent
 outlaws,agency_pos,power_agent
-outlines,agency_pos,power_theme
 overcomes,agency_pos,power_agent
 overflows,agency_neg,
 overhears,agency_equal,power_equal
@@ -1237,7 +1105,6 @@ overtakes,agency_pos,power_agent
 overthrows,agency_pos,power_agent
 overturns,agency_pos,power_agent
 overwhelms,agency_pos,power_agent
-owes,agency_neg,power_theme
 owns,agency_equal,power_agent
 paces,agency_pos,power_equal
 packs,agency_pos,power_agent
@@ -1281,7 +1148,6 @@ performs,agency_pos,power_equal
 permits,agency_pos,power_agent
 perplexes,agency_neg,power_agent
 persuades,agency_pos,power_agent
-peruses,agency_pos,power_theme
 pets,agency_pos,power_equal
 phones,agency_pos,power_equal
 photographs,agency_pos,power_equal
@@ -1300,8 +1166,6 @@ plants,agency_pos,power_agent
 plasters,agency_pos,power_agent
 plats,agency_pos,power_equal
 plays,agency_pos,power_agent
-pleads,agency_pos,power_theme
-pleases,agency_neg,power_theme
 pledges,agency_pos,power_agent
 plops,agency_pos,power_agent
 plows,agency_pos,power_agent
@@ -1314,10 +1178,8 @@ points at,agency_pos,power_equal
 poises,agency_pos,
 poisons,agency_pos,power_agent
 pokes,agency_pos,power_agent
-polishes,agency_pos,power_theme
 ponders,agency_neg,
 pops,agency_pos,power_agent
-portrays,agency_pos,power_theme
 poses,agency_neg,
 positions,agency_pos,power_agent
 possesses,agency_equal,power_agent
@@ -1327,14 +1189,9 @@ pounces,agency_pos,
 pounds,agency_pos,power_agent
 pours,agency_pos,power_agent
 powers,agency_pos,power_agent
-practices,agency_pos,power_theme
 praises,agency_pos,power_equal
-prays,agency_equal,power_theme
-prays to,agency_neg,power_theme
 preaches,agency_pos,power_equal
 precedes,agency_neg,power_agent
-predicts,agency_equal,power_theme
-prefers,agency_neg,power_theme
 preoccupies,agency_equal,power_agent
 prepares,agency_pos,power_agent
 prescribes,agency_pos,power_agent
@@ -1360,7 +1217,6 @@ progresses,agency_pos,
 prohibits,agency_pos,power_agent
 projects,agency_equal,power_agent
 promises,agency_pos,power_equal
-promotes,agency_pos,power_theme
 prompts,agency_pos,power_agent
 pronounces,agency_pos,power_agent
 propels,agency_pos,power_agent
@@ -1387,7 +1243,6 @@ punctures,agency_pos,power_agent
 punishes,agency_pos,power_agent
 purchases,agency_pos,power_agent
 purrs,agency_equal,
-pursues,agency_pos,power_theme
 pushes,agency_pos,power_agent
 puts,agency_equal,power_agent
 puzzles,agency_neg,power_agent
@@ -1397,10 +1252,8 @@ quickens,agency_pos,power_agent
 quiets,agency_pos,power_agent
 quits,agency_pos,power_agent
 quivers,agency_pos,
-quotes,agency_equal,power_theme
 races,agency_pos,power_equal
 racks up,agency_pos,power_equal
-radiates,agency_equal,power_theme
 rags,agency_pos,power_agent
 raids,agency_pos,power_agent
 rails against,agency_pos,power_agent
@@ -1418,9 +1271,7 @@ rats on,agency_pos,power_agent
 rattles,agency_pos,power_agent
 ravages,agency_pos,power_agent
 raves,agency_pos,
-reaches,agency_pos,power_theme
 reacts,agency_pos,
-reacts to,agency_pos,power_theme
 readies,agency_pos,power_agent
 reads,agency_equal,power_agent
 reaffirms,agency_pos,power_agent
@@ -1432,14 +1283,10 @@ rears,agency_pos,
 reasons,agency_pos,
 reassures,agency_pos,power_agent
 rebuilds,agency_pos,power_agent
-recalls,agency_neg,power_theme
 recedes,agency_neg,
-receives,agency_neg,power_theme
 recites,agency_pos,power_equal
 reckons,agency_pos,power_agent
 reclines,agency_neg,
-recognises,agency_equal,power_theme
-recognizes,agency_neg,power_theme
 recoils,agency_equal,
 recommends,agency_pos,power_agent
 reconciles,agency_pos,power_equal
@@ -1452,17 +1299,13 @@ reduces,agency_pos,power_agent
 reels,agency_neg,
 refers,agency_pos,power_equal
 refills,agency_pos,power_agent
-reflects,agency_neg,power_theme
 refuses,agency_pos,power_agent
 regains,agency_pos,power_agent
-regards,agency_neg,power_theme
 registers,agency_pos,power_agent
-regrets,agency_neg,power_theme
 regulates,agency_pos,power_agent
 rehearses,agency_pos,power_equal
 reinforces,agency_pos,power_agent
 reins,agency_pos,power_equal
-reiterates,agency_equal,power_theme
 rejects,agency_pos,power_agent
 rejoins,agency_pos,power_equal
 relates to,agency_neg,power_equal
@@ -1470,8 +1313,6 @@ relaxes,agency_neg,
 releases,agency_pos,power_agent
 relents,agency_pos,
 relies,agency_neg,
-relieves,agency_pos,power_theme
-relishes,agency_neg,power_theme
 reloads,agency_pos,power_agent
 remains,agency_neg,
 remembers,agency_equal,power_equal
@@ -1484,24 +1325,16 @@ renounces,agency_pos,power_agent
 rents,agency_pos,power_equal
 reopens,agency_pos,power_agent
 repairs,agency_pos,power_agent
-repays,agency_pos,power_theme
-repeats,agency_pos,power_theme
 replaces,agency_pos,power_agent
 replies,agency_neg,power_equal
 reports,agency_pos,power_agent
-represents,agency_pos,power_theme
-repulses,agency_neg,power_theme
 requests,agency_equal,power_equal
-requires,agency_equal,power_theme
 rescues,agency_pos,power_agent
 resembles,agency_neg,power_equal
-resents,agency_neg,power_theme
 reserves,agency_pos,power_agent
 resigns,agency_equal,
 resists,agency_pos,power_equal
 resolves,agency_pos,power_equal
-respects,agency_equal,power_theme
-responds,agency_pos,power_theme
 restores,agency_pos,power_agent
 restrains,agency_pos,power_agent
 restricts,agency_pos,power_agent
@@ -1522,7 +1355,6 @@ reviews,agency_pos,power_equal
 revises,agency_pos,power_agent
 revives,agency_pos,power_agent
 revolves,agency_pos,
-revolves around,agency_equal,power_theme
 revs,agency_pos,power_agent
 rewards,agency_pos,power_agent
 ricochets,agency_pos,
@@ -1568,9 +1400,7 @@ sacrifices,agency_pos,power_agent
 saddles,agency_pos,power_agent
 sags,agency_neg,
 sails,agency_pos,power_agent
-salutes,agency_pos,power_theme
 salvages,agency_pos,power_agent
-satisfies,agency_pos,power_theme
 saunters,agency_pos,
 saves,agency_pos,power_agent
 savors,agency_pos,power_equal
@@ -1608,10 +1438,8 @@ scuttles,agency_pos,
 seals,agency_pos,power_agent
 searches,agency_pos,power_agent
 sears,agency_pos,power_agent
-seats,agency_pos,power_theme
 secures,agency_pos,power_agent
 seduces,agency_pos,power_agent
-seeks,agency_pos,power_theme
 seems,agency_neg,
 sees,agency_neg,power_equal
 seethes,agency_pos,
@@ -1619,16 +1447,13 @@ seizes,agency_pos,power_agent
 selects,agency_pos,power_agent
 sells,agency_pos,power_agent
 sends,agency_pos,power_agent
-senses,agency_neg,power_theme
 sentences,agency_pos,power_agent
 separates,agency_pos,power_agent
-serves,agency_equal,power_theme
 sets,agency_pos,power_agent
 settles,agency_pos,power_agent
 severs,agency_pos,power_agent
 sews,agency_pos,power_equal
 shades,agency_pos,power_equal
-shadows,agency_equal,power_theme
 shakes,agency_pos,power_agent
 shapes,agency_pos,power_agent
 shares,agency_pos,power_agent
@@ -1654,7 +1479,6 @@ shoulders,agency_pos,power_agent
 shouts,agency_pos,power_agent
 shovels,agency_pos,power_agent
 shoves,agency_pos,power_agent
-showers,agency_pos,power_theme
 shows,agency_pos,power_agent
 shreds,agency_pos,power_agent
 shrieks,agency_pos,power_agent
@@ -1668,14 +1492,12 @@ shuts,agency_pos,power_agent
 sickens,agency_pos,power_agent
 sides,agency_equal,
 sidesteps,agency_pos,power_agent
-sidles up to,agency_pos,power_theme
 sifts,agency_pos,power_agent
 sighs,agency_equal,
 sights,agency_pos,power_equal
 signals,agency_pos,power_equal
 signs,agency_pos,power_equal
 silences,agency_pos,power_agent
-silhouettes,agency_neg,power_theme
 simmers,agency_pos,power_agent
 singles out,agency_pos,power_agent
 sings,agency_pos,power_agent
@@ -1718,7 +1540,6 @@ slurs,agency_equal,
 smacks,agency_pos,power_agent
 smashes,agency_pos,power_agent
 smears,agency_pos,power_agent
-smells,agency_neg,power_theme
 smiles,agency_pos,
 smirks,agency_neg,
 smokes,agency_pos,power_agent
@@ -1805,7 +1626,6 @@ stacks,agency_pos,power_agent
 staggers,agency_equal,
 stains,agency_pos,power_agent
 stakes,agency_pos,power_agent
-stalks,agency_pos,power_theme
 stalls,agency_pos,power_agent
 stamps,agency_pos,power_agent
 stands,agency_equal,
@@ -1859,7 +1679,6 @@ strings,agency_pos,power_agent
 strips,agency_pos,power_agent
 strokes,agency_pos,power_equal
 strolls,agency_equal,
-struggles,agency_equal,power_theme
 struts,agency_pos,
 stubs,agency_equal,power_agent
 studies,agency_pos,power_equal
@@ -1870,10 +1689,8 @@ subdues,agency_pos,power_agent
 submerges,agency_pos,power_agent
 submits,agency_pos,power_equal
 subsides,agency_neg,
-subtitles,agency_pos,power_theme
 succeeds,agency_pos,power_agent
 sues,agency_pos,power_agent
-suffers,agency_neg,power_theme
 suffocates,agency_pos,power_agent
 suggests,agency_pos,power_agent
 sulks,agency_neg,
@@ -1892,7 +1709,6 @@ surrenders,agency_neg,power_agent
 surrounds,agency_pos,power_agent
 surveys,agency_pos,power_equal
 survives,agency_neg,power_equal
-survives on,agency_pos,power_theme
 suspects,agency_pos,power_equal
 suspends,agency_pos,power_agent
 sustains,agency_pos,power_agent
@@ -1918,7 +1734,6 @@ tackles,agency_pos,power_agent
 tacks,agency_pos,power_agent
 tags,agency_pos,power_agent
 tailors,agency_pos,power_equal
-tails,agency_pos,power_theme
 takes,agency_pos,power_equal
 talks,agency_pos,
 talks to,agency_pos,power_equal
@@ -1945,7 +1760,6 @@ terrifies,agency_pos,power_agent
 testifies,agency_pos,power_equal
 tests,agency_pos,power_agent
 tethers,agency_pos,power_agent
-thanks,agency_pos,power_theme
 thaws,agency_pos,power_agent
 thinks,agency_pos,power_equal
 thins,agency_pos,power_agent
@@ -1968,7 +1782,6 @@ tightens,agency_pos,power_agent
 tilts,agency_pos,power_agent
 times,agency_pos,power_agent
 tings,agency_pos,
-tips,agency_pos,power_theme
 tiptoes,agency_pos,
 tires,agency_equal,power_agent
 toasts,agency_pos,power_equal
@@ -1979,11 +1792,9 @@ torments,agency_pos,power_agent
 tortures,agency_pos,power_agent
 tosses,agency_pos,power_agent
 totals,agency_pos,power_agent
-touches,agency_pos,power_theme
 towers,agency_neg,
 tows,agency_pos,power_agent
 toys with,agency_pos,power_agent
-traces,agency_pos,power_theme
 tracks,agency_pos,power_agent
 trades,agency_pos,power_agent
 trails,agency_pos,power_equal
@@ -2007,11 +1818,9 @@ tries,agency_pos,power_equal
 triggers,agency_pos,power_agent
 trims,agency_pos,power_agent
 trips,agency_pos,power_agent
-trips on,agency_neg,power_theme
 trots,agency_pos,power_equal
 troubles,agency_pos,power_agent
 trudges,agency_pos,
-trusts,agency_neg,power_theme
 tucks,agency_pos,power_equal
 tugs,agency_pos,power_agent
 tumbles,agency_pos,
@@ -2025,14 +1834,11 @@ types,agency_pos,power_equal
 unbuckles,agency_pos,power_agent
 unbuttons,agency_pos,power_agent
 uncovers,agency_pos,power_agent
-underestimates,agency_equal,power_theme
-undergoes,,power_theme
 undergos,agency_neg,
 underlies,agency_neg,power_agent
 undermines,agency_pos,power_agent
 underscores,agency_pos,power_agent
 understands,agency_equal,power_agent
-undertakes,agency_pos,power_theme
 undoes,agency_pos,power_agent
 undresses,agency_pos,power_agent
 undulates,agency_pos,
@@ -2040,7 +1846,6 @@ unfolds,agency_pos,power_agent
 unhooks,agency_pos,power_agent
 unites,agency_pos,power_agent
 unleashes,agency_pos,power_agent
-unloads,agency_pos,power_theme
 unlocks,agency_pos,power_equal
 unnerves,agency_pos,power_agent
 unpacks,agency_pos,power_agent
@@ -2050,13 +1855,11 @@ unscrews,agency_pos,power_agent
 unties,agency_pos,power_agent
 unwraps,agency_pos,power_agent
 unzips,agency_pos,power_agent
-upholds,agency_pos,power_theme
 upsets,agency_pos,power_agent
 urges,agency_pos,power_equal
 uses,agency_pos,power_agent
 ushers,agency_equal,power_agent
 utters,agency_pos,power_equal
-values,agency_neg,power_theme
 vanishes,agency_neg,
 varies,agency_neg,
 vaults,agency_pos,power_agent
@@ -2069,20 +1872,17 @@ vetos,agency_pos,
 vibrates,agency_pos,power_agent
 views,agency_neg,power_equal
 violates,agency_pos,power_agent
-visits,agency_pos,power_theme
 voices,agency_pos,power_equal
 volunteers,agency_pos,power_equal
-votes,agency_pos,power_theme
 wads,agency_pos,power_agent
 wags,agency_pos,power_agent
 wails,agency_neg,
-waits,agency_neg,power_theme
+wait,agency_neg,power_theme
 wakes,agency_pos,power_agent
 walks,agency_pos,power_agent
 walls,agency_pos,power_agent
 waltzes,agency_pos,
 wanders,agency_neg,
-wants,agency_neg,power_theme
 warms,agency_pos,power_agent
 warns,agency_pos,power_agent
 warrants,agency_equal,power_agent
@@ -2094,7 +1894,6 @@ wavers,agency_equal,
 waves,agency_pos,power_equal
 weakens,agency_pos,power_agent
 wears,agency_pos,power_agent
-weathers,agency_pos,power_theme
 weaves,agency_pos,power_agent
 wedges,agency_pos,power_agent
 weeps,agency_neg,
@@ -2125,17 +1924,14 @@ winks,agency_equal,
 wins,agency_pos,power_agent
 wipes,agency_pos,power_agent
 wires,agency_pos,power_agent
-wishes,agency_neg,power_theme
 withdraws,agency_pos,power_agent
 withers,agency_neg,
 withholds,agency_pos,power_agent
-witnesses,agency_neg,power_theme
 wobbles,agency_neg,
-wonders,agency_neg,power_theme
 works,agency_pos,
 worries,agency_neg,power_equal
 worsens,agency_pos,power_agent
-worships,agency_pos,power_theme
+worship,agency_pos,power_theme
 wounds,agency_pos,power_agent
 wracks,agency_pos,power_equal
 wraps,agency_pos,power_equal
@@ -2154,3 +1950,182 @@ yields,agency_equal,power_agent
 zaps,agency_pos,power_agent
 zips,agency_pos,
 zooms,agency_pos,
+apologize,agency_pos,power_theme
+assist,agency_pos,power_theme
+behold,agency_equal,power_theme
+browse,agency_pos,power_theme
+chase,agency_pos,power_theme
+collect,agency_pos,power_theme
+comprehend,agency_pos,power_theme
+concentrate,agency_equal,power_theme
+cram,agency_pos,power_theme
+delight,agency_pos,power_theme
+desire,agency_neg,power_theme
+elaborate,agency_pos,power_theme
+envy,agency_equal,power_theme
+fill,agency_pos,power_theme
+hail,agency_pos,power_theme
+jot,agency_pos,power_theme
+lug,agency_pos,power_theme
+mime,agency_pos,power_theme
+mimic,agency_pos,power_theme
+nods,agency_pos,power_theme
+nuzzle,agency_pos,power_theme
+outline,agency_pos,power_theme
+peruse,agency_pos,power_theme
+please,agency_neg,power_theme
+polish,agency_pos,power_theme
+reach,agency_pos,power_theme
+recall,agency_neg,power_theme
+recognize,agency_neg,power_theme
+reflect,agency_neg,power_theme
+reiterate,agency_equal,power_theme
+relieve,agency_pos,power_theme
+relishe,agency_neg,power_theme
+repulse,agency_neg,power_theme
+require,agency_equal,power_theme
+touch,agency_pos,power_theme
+underestimate,agency_equal,power_theme
+adorn,agency_pos,power_theme
+aggravate,agency_pos,power_theme
+amuse,agency_pos,power_theme
+ascend,agency_pos,power_theme
+brief,agency_equal,power_theme
+dread,agency_neg,power_theme
+dwell,agency_equal,power_theme
+eyeballs,agency_pos,power_theme
+fancy,agency_neg,power_theme
+follow,agency_neg,power_theme
+hate,agency_neg,power_theme
+imitate,agency_equal,power_theme
+miss,agency_neg,power_theme
+misunderstand,agency_neg,power_theme
+radiate,agency_equal,power_theme
+repay,agency_pos,power_theme
+respect,agency_equal,power_theme
+salute,agency_pos,power_theme
+sense,agency_neg,power_theme
+silhouette,agency_neg,power_theme
+stalk,agency_pos,power_theme
+struggle,agency_equal,power_theme
+subtitle,agency_pos,power_theme
+accompany,agency_equal,power_theme
+brush,agency_pos,power_theme
+chant,agency_pos,power_theme
+implore,agency_pos,power_theme
+lack,agency_neg,power_theme
+massage,agency_pos,power_theme
+regard,agency_neg,power_theme
+repeat,agency_pos,power_theme
+seek,agency_pos,power_theme
+shower,agency_pos,power_theme
+smell,agency_neg,power_theme
+tail,agency_pos,power_theme
+unload,agency_pos,power_theme
+weather,agency_pos,power_theme
+believe,agency_neg,power_theme
+compensate,agency_pos,power_theme
+compile,agency_pos,power_theme
+detect,agency_pos,power_theme
+honor,agency_pos,power_theme
+incorporate,agency_pos,power_theme
+indulge,agency_equal,power_theme
+like,agency_equal,power_theme
+mingle,agency_pos,power_theme
+adore,agency_equal,power_theme
+applaud,agency_pos,power_theme
+donate,agency_pos,power_theme
+entertain,agency_pos,power_theme
+evade,agency_pos,power_theme
+grieve,agency_neg,power_theme
+join,agency_pos,power_theme
+mention,agency_equal,power_theme
+oblige,agency_equal,power_theme
+represent,agency_pos,power_theme
+congratulate,agency_equal,power_theme
+fulfill,agency_pos,power_theme
+obey,agency_neg,power_theme
+quote,agency_equal,power_theme
+satisfy,agency_pos,power_theme
+serve,agency_equal,power_theme
+wonder,agency_neg,power_theme
+credit,agency_pos,power_theme
+defer,agency_equal,power_theme
+echo,,power_theme
+emit,agency_pos,power_theme
+seat,agency_pos,power_theme
+cites,agency_pos,power_theme
+disappoint,agency_pos,power_theme
+experience,agency_neg,power_theme
+value,agency_neg,power_theme
+wish,agency_neg,power_theme
+consult,agency_pos,power_theme
+dream,agency_neg,power_theme
+endure,agency_neg,power_theme
+enforce,agency_pos,power_theme
+enjoy,agency_neg,power_theme
+learn,agency_equal,power_theme
+offend,agency_pos,power_theme
+pursue,agency_pos,power_theme
+admire,agency_equal,power_theme
+answer,agency_equal,power_theme
+commemorates,agency_pos,power_theme
+contract,agency_pos,power_theme
+duck,agency_pos,power_theme
+practice,agency_pos,power_theme
+regret,agency_neg,power_theme
+resent,agency_neg,power_theme
+shadow,agency_equal,power_theme
+undertake,agency_pos,power_theme
+achieve,agency_pos,power_theme
+cheer,agency_pos,power_theme
+depart,agency_pos,power_theme
+need,agency_neg,power_theme
+pray,agency_equal,power_theme
+promote,agency_pos,power_theme
+visit,agency_pos,power_theme
+beg,agency_pos,power_theme
+copy,agency_pos,power_theme
+plead,agency_pos,power_theme
+tip,agency_pos,power_theme
+uphold,agency_pos,power_theme
+benefit,agency_neg,power_theme
+celebrate,agency_pos,power_theme
+constitute,agency_neg,power_theme
+greet,agency_equal,power_theme
+hope,agency_equal,power_theme
+interest,agency_neg,power_theme
+lose,agency_equal,power_theme
+mind,agency_equal,power_theme
+portray,agency_pos,power_theme
+predict,agency_equal,power_theme
+undergo,,power_theme
+vote,agency_pos,power_theme
+want,agency_neg,power_theme
+admit,agency_pos,power_theme
+announce,agency_pos,power_theme
+appeal,agency_neg,power_theme
+ask,agency_pos,power_theme
+attend,agency_equal,power_theme
+await,agency_neg,power_theme
+become,agency_pos,power_theme
+call,agency_pos,power_theme
+concede,agency_pos,power_theme
+contribute,agency_pos,power_theme
+explain,agency_pos,power_theme
+fan,agency_pos,power_theme
+fear,agency_neg,power_theme
+guard,agency_pos,power_theme
+hear,agency_neg,power_theme
+listen,agency_pos,power_theme
+note,agency_equal,power_theme
+owe,agency_neg,power_theme
+prefer,agency_neg,power_theme
+receive,agency_neg,power_theme
+recognize,agency_equal,power_theme
+respond,agency_pos,power_theme
+suffer,agency_neg,power_theme
+thank,agency_pos,power_theme
+trace,agency_pos,power_theme
+trust,agency_neg,power_theme
+witness,agency_neg,power_theme
